@@ -99,3 +99,41 @@ int main()
     // div(n);
     return 0;
 }
+
+
+//Using Lists
+
+#include<bits/stdc++.h>
+#include<iostream>
+using namespace std;
+
+void div(int n)
+{
+    list<int> ls;
+    for(int i=1 ; i<=sqrt(n) ; i++)
+    {
+        if(n % i == 0)
+        {
+           ls.push_back(i);
+           if(n/i !=i )
+           {
+               ls.push_back(n/i);
+           }
+        }
+    }
+    // sort(ls.begin(),ls.end());  //list datatype doesnt support random acces iterators..so ls.sort()
+    ls.sort();
+    
+    for(auto i: ls){cout<<i<<" ";}
+    
+}
+int main()
+{
+    int n;
+    cout<<"Enter Number"<<endl;
+    cin>>n;
+    
+    cout<<"The Divisors are :"<<endl;
+    div(n);
+    return 0;
+}
