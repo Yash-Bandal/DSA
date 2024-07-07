@@ -137,3 +137,51 @@ int main()
     div(n);
     return 0;
 }
+
+
+
+//Optimized TC
+
+#include<bits/stdc++.h>
+#include<iostream>
+using namespace std;
+
+void div(int n)
+{
+    list<int> ls;
+    // for(int i=1 ; i<=sqrt(n) ; i++)
+
+    //6*6<=36
+    //*7<!=36
+    //TC=O(root N)  ....O( √N)  +
+        for(int i=1 ; i*i<=n ; i++)
+    {
+        if(n % i == 0)
+        {
+           ls.push_back(i);
+           if(n/i !=i )
+           {
+               ls.push_back(n/i);
+           }
+        }
+    }
+    // sort(ls.begin(),ls.end());   //not work
+
+    //Internal sort func TC= O(no of factors Log(no of Factors))  ..O(nLog n) +
+    ls.sort();
+    
+    //O(n)...thus total is sum of above all
+    for(auto i: ls){cout<<i<<" ";}
+    
+}
+int main()
+{
+    int n;
+    cout<<"Enter Number"<<endl;
+    cin>>n;
+    
+    cout<<"The Divisors are :"<<endl;
+    div(n);
+    return 0;
+}
+
