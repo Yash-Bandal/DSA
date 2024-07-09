@@ -1,7 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 int cnt = 0;
-
 void print(){
    
    // Base Condition.
