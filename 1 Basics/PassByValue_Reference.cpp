@@ -3,8 +3,6 @@
 //pass By reference
 #include <iostream>
 using namespace std;
-
-
 void addAndPrintSum(int &num1, int &num2)         
 {
     // cout<<num1<<num2<<endl;  //here copy of a and b 70 70 brought up
