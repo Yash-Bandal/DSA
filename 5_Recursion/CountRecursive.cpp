@@ -10,7 +10,6 @@ void print(){
    // Count Incremented
    cnt++;
    print();
-
 }
 
 int main(){
