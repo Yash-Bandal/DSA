@@ -526,11 +526,11 @@ void printPattern19(int n)
         cout << endl;
     }
 }
-// A
-// B B
-// C C C
-// D D D D
-// E E E E E
+//     A    
+//    ABA   
+//   ABCBA  
+//  ABCDCBA 
+// ABCDEDCBA
 
 void printPattern20(int n)
 {
