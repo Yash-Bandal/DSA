@@ -20,7 +20,6 @@ int main(){
   return 0;
 
 }
-
 //my try
 #include<iostream>
 using namespace std;
