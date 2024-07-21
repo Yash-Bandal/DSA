@@ -40,3 +40,30 @@ int main()
     rec(1,n);
     return 0;
 }
+
+
+// Nishant chahar crc
+#include <iostream>
+using namespace std;
+void rec(int n)
+{
+
+  if (n == 1)
+  {
+    cout << 1;
+    return;
+  }
+
+  rec(n - 1);
+
+  cout <<(n)<< " ";
+}
+int main()
+{
+  int n;
+  cout << "Enter NUmber of elements" << endl;
+  cin >> n;
+  rec(n);
+  return 0;
+}
+ 
