@@ -5,7 +5,6 @@ int sumRec(int N)
     if(N==1){  //base think of smallest sumRec possibility Input N=1
     return 1;
     }
-
 int temp=sumRec(N-1);  //smalles subproblem closes to N is N-1
 return (temp+N);   //sumRec(N-1)+N is ans
 }
