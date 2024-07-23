@@ -2,6 +2,7 @@
 using namespace std;
 
 void div(int n)
+
 {
     for(int i=1 ; i<=n ; i++)
     {
