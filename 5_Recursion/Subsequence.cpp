@@ -1,4 +1,5 @@
-
+//easy just onclude exclude...TC= O(2*n) *n fpr [rinting each  
+//sc=O(n) for n time recursion max not more..here 3 times rec
 #include <iostream>
 #include <vector>
 using namespace std;
