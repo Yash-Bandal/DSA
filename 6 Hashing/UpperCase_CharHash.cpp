@@ -2,7 +2,6 @@
 using namespace std;
 
 int main() {
-
 cout<<"Enter string of chars UpperCase"<<endl;
     string s;
     cin >> s;
