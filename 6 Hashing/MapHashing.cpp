@@ -19,6 +19,18 @@ int main()
         mpp[arr[i]]++;
     }
 
+    // Display Map
+    for (auto it : mpp)
+    {
+        cout << it.first << " :" << it.second << endl;
+    }
+    /*
+0 :1
+1 :3
+4 :2
+6 :2
+7 :2*/
+
     cout << "Enter queries" << endl;
     int q;
     cin >> q;
