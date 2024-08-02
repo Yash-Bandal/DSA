@@ -36,7 +36,7 @@ int main()
     cin >> q;
     while (q--)
     {
-        cout << "Enter Char ";
+        cout << "Enter Number ";
         int number;
         cin >> number;
         // fetch:
