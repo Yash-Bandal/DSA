@@ -8,9 +8,9 @@ cout<<"Enter String of Mixed CHars"<<endl;
     cin >> s;
 
     //precompute:
-    int hash[256] = {0};
+    int hash[256] = {0};   //A has 65 ascii..so count stored at 65 small a at 96..behind 65 empty arr
     for (int i = 0; i < s.size(); i++) {
-        hash[s[i]]++;
+        hash[s[i]]++;    //autocast charac to asci num
     }
     cout<<"Enter query count"<<endl;
 
