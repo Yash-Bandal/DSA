@@ -44,3 +44,48 @@ int main()
     }
     return 0;
 }
+
+//string map
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+   string str;
+
+    cout << "Enter String" << endl;
+    cin>>str;
+  
+    // prefetch
+    unordered_map<char, int> mpp;
+    // for(auto it:str)  //dont use auto i
+    // {
+    //     // mpp[str[i]]++;  //here we are using range for so i not str[i]..so use 'it' not i for ess confusion
+    //       mpp[it]++;
+    // }
+
+    for(int i=0;i<str.length();i++)
+    {
+        mpp[str[i]]++;
+    }
+
+    // Display Map
+    for (auto it : mpp)
+    {
+        cout << it.first << " :" << it.second << endl;
+    }
+
+    cout << "Enter queries" << endl;
+    int q;
+    cin >> q;
+    while (q--)
+    {
+        cout << "Enter Char ";
+        char c;
+        cin >> c;
+        // fetch:
+        cout << mpp[c] << endl;
+    }
+    return 0;
+}
