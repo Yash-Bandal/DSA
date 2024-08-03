@@ -8,7 +8,7 @@ void countFreq(int arr[], int n)
     for (size_t i{0}; i < n; i++)
     {
         // Skip this element if already processed
-        if (visited[i] == true)
+        if (visited[i] == true)  //skips that particular i and jump to next i and start for loop again
         {
             continue;
         }
@@ -39,6 +39,9 @@ int main()
 Time Complexity: O(N*N)
 Space Complexity:  O(N)
 
+
+when the continue statement is encountered within a loop, it skips the rest
+of the code inside the loop for the current iteration and proceeds with the next iteration of the loop.
 
 Visualization:
 Initialization:
