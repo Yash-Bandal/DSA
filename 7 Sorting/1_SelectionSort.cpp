@@ -86,4 +86,4 @@ int main() {
     printArray(arr, n);
     return 0;
 }
-
+TC=O n^2
