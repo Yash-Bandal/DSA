@@ -87,3 +87,41 @@ int main() {
     return 0;
 }
 TC=O n^2
+
+
+    //MaxIndex Descending order
+    #include <bits/stdc++.h>
+using namespace std;
+
+void selectionSortDescending(vector<int> &arr, int n) {
+    for (int i = 0; i < n - 1; i++) {
+        // Assume the current index is the maximum
+        int maxInd = i;
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] > arr[maxInd]) {
+                maxInd = j; // Update maxInd if a larger element is found
+            }
+        }
+        // Swap the found maximum element with the first element
+        if (maxInd != i) {
+            swap(arr[maxInd], arr[i]);
+        }
+    }
+}
+
+void printArray(const vector<int> &arr, int n) {
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    vector<int> arr = {7, 9, 0, 5, 3, 4, 2, 1, 6};
+    int n = arr.size();
+    selectionSortDescending(arr, n);
+    cout << "After Sorting in Descending Order:" << endl;
+    printArray(arr, n);
+    return 0;
+}
+
