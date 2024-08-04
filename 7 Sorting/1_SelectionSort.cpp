@@ -12,8 +12,8 @@
 using namespace std;
 
 
-void selectionSort(vector<int> &arr, int n)
-{
+void selectionSort(vector<int> &arr, int n)  //Pass by reference all time  &arr or arr[]
+{  
 
     for (int i = 0; i < n - 1; i++)
     {
