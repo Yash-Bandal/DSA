@@ -46,3 +46,12 @@ public:
         return totalPresses;
     }
 };
+
+/*
+The core idea behind solving this problem lies in optimizing the key mapping to minimize the total number of key presses required to type a given word. The intuition stems from the observation that in an optimal mapping, the most frequently occurring letters should be assigned to keys that require the least number of presses.
+
+Consider a standard phone keypad with 8 available keys (2-9). Each key can be pressed multiple times to access different letters. For instance, pressing a key once might give you the first letter, twice for the second letter, and so on. With this in mind, the optimal strategy would be to assign the 8 most frequent letters to single presses across the 8 keys, the next 8 most frequent letters to double presses, and continue this pattern.
+
+This approach naturally leads to a greedy algorithm. By sorting the letters based on their frequency in descending order, we can ensure that the most common letters are assigned to the easiest-to-access positions on the keypad.
+*/
+https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-ii/discuss/5593444/O(n)-or-Greedy-or-Heap-or-Java-or-C%2B%2B-or-Python-or-Go-or-Rust-or-JavaScript
