@@ -1,4 +1,6 @@
 // merge sort
+//Lowest TC O(N log N)
+
 #include <bits/stdc++.h>
 using namespace std;
 
