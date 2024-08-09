@@ -89,7 +89,7 @@ class Solution
 {
 //call func in private..cant define funcs here..just call as its a return type
 public:
-    vector<int> sortAhttps://leetcode.com/problems/sort-an-array/discuss/rray(vector<int> &nums)
+       vector<int> sortArray(vector<int> &nums)
     {
         mergeSort(nums, 0, nums.size() - 1);
         return nums;
