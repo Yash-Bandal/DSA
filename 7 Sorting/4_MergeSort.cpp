@@ -42,7 +42,7 @@ void merge(vector<int> &arr,int low,int mid,int high){
 
 }
 void mergeSort(vector<int> &arr,int low ,int high){
-    if(low>= high){
+    if(low == high){ //that is single element 
         return ;
     }
     int mid=(low+high)/2;
