@@ -16,6 +16,24 @@ public:
         
     }
 };
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        
+        int expectedSun=0;
+        for(int i=0;i<=nums.size();i++)  //run = to n not < use <=
+        {
+            expectedSun=expectedSun+i;
+        }
+        int resSum=0;
+        for(int i=0;i<nums.size();i++){
+            resSum=resSum+nums[i];
+        }
+        int missingNum=expectedSun-resSum;
+        return missingNum;
+        
+    }
+};
 
 class Solution {
 public:
