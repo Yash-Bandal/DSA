@@ -140,6 +140,8 @@ dont
    
 */
 
+https://leetcode.com/problems/kth-distinct-string-in-an-array/
+
 
 #include <iostream>
 #include <vector>
