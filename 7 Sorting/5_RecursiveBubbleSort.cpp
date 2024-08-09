@@ -1,4 +1,4 @@
-
+//the outer loop of i is for(int i=n; i>=1;i++)..thus base case is single num..2ns elem of outer for loop
 // bubbleRec sort
 #include <bits/stdc++.h>
 using namespace std;
