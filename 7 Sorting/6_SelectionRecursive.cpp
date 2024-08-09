@@ -6,6 +6,8 @@ we here eliminate outer loop
 
 let j=i here and resemble i as beginIndex
 perform the outer loop as beginIndex recursion
+
+Its like for(i=0;i<n;i++) outer loop
 */
 
 
