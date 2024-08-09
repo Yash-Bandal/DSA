@@ -33,9 +33,9 @@ void countFreq(int arr[], int n)
             maxFreq = it.second;
             maxFreqEle.clear();
             maxFreqEle.push_back(it.first);
-        }
-        else if (it.second == maxFreq)
-        {
+        }                                                                                    //   it.fir it.sec
+        else if (it.second == maxFreq)//if other elem eg 3 3 3 7 7 7   both have same high freqvnt=3 3  :  3
+        {                                                                                      //    7  :  3
             maxFreqEle.push_back(it.first);
         }
         
@@ -105,11 +105,13 @@ void countFreq(vector<int> vec, int n)
     {
         cout << it.first << " :" << it.second << endl;
     }
+    //Frequency count
     for (auto it : mpp)
     {
         maxFreq = max(maxFreq, it.second);
         minFreq = min(minFreq, it.second);
     }
+    //max freq elem get
     for (auto it : mpp)
     {
         if (it.second == maxFreq)
