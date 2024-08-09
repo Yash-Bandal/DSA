@@ -84,3 +84,66 @@ and so on...
 By doing temp[i - low], you ensure you are copying from the
 correct index of temp back to the corresponding index in arr.
 */
+//LeetCode..Class 
+class Solution
+{
+//call func in private..cant define funcs here..just call as its a return type
+public:
+    vector<int> sortAhttps://leetcode.com/problems/sort-an-array/discuss/rray(vector<int> &nums)
+    {
+        mergeSort(nums, 0, nums.size() - 1);
+        return nums;
+    }
+
+private:
+    void merge(vector<int> &nums, int low, int mid, int high)
+    {
+        vector<int> temp;
+        int left = low;
+        int right = mid + 1;
+        // while
+        while (left <= mid && right <= high)
+        {
+            if (nums[left] <= nums[right])
+            {
+                temp.push_back(nums[left]);
+                left++;
+            }
+            else
+            {
+                temp.push_back(nums[right]);
+                right++;
+            }
+        }
+        // push remaining
+        while (left <= mid)
+        {
+            temp.push_back(nums[left]);
+            left++;
+        }
+        while (right <= high)
+        {
+
+            temp.push_back(nums[right]);
+            right++;
+        }
+        // modify in place
+        for (int i = low; i <= high; i++)
+        {
+            nums[i] = temp[i - low];
+        }
+    }
+
+    void mergeSort(vector<int> &nums, int low, int high)
+    {
+        if (low == high)
+        {
+            return;
+        }
+        int mid = (low + high) / 2;
+        mergeSort(nums, low, mid);
+        mergeSort(nums, mid + 1, high);
+
+        merge(nums, low, mid, high);
+    }
+};
