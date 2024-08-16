@@ -19,7 +19,6 @@ int findSecondLargestElement(int arr[], int n) {
   }
   //we now again repeat the above but just check if elem is not equal to largest..thus returning sec large
 
-
   return secLargest;
 }
 int main() {
