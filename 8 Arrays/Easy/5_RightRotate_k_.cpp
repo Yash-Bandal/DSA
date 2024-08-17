@@ -94,3 +94,40 @@ Final Output
 nums = [5, 6, 7, 1, 2, 3, 4]
 
 */
+
+
+//Brute 
+class Solution
+{
+public:
+ 
+//Place this function in above template ..just dont forget to pass size n
+void rightRotate(vector<int> &nums, int k)
+    {
+        int n = nums.size();
+
+        // If k is greater than n, reduce it to within the array size
+        k = k % n;
+
+        // Create a temporary vector to store the last k elements
+        vector<int> temp(k);
+
+        // Copy the last k elements to the temporary vector
+        for (int i = 0; i < k; i++)
+        {
+            temp[i] = nums[n - k + i];
+        }
+
+        // Shift the remaining elements to the right by k positions
+        for (int i = n - 1; i >= k; i--)
+        {
+            nums[i] = nums[i - k];
+        }
+
+        // Copy the elements from the temporary vector to the beginning of the array
+        for (int i = 0; i < k; i++)
+        {
+            nums[i] = temp[i];
+        }
+    }
+};
