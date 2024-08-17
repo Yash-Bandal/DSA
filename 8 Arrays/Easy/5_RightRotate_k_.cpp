@@ -131,3 +131,88 @@ void rightRotate(vector<int> &nums, int k)
         }
     }
 };
+
+//Using Reversealgo
+/*
+Approach 2: Using ” Reversal Algorithm “
+
+Approach:
+
+For Rotating Elements to right
+Step 1: Reverse the last k elements of the array
+
+Step 2: Reverse the first n-k elements of the array.
+
+Step 3: Reverse the whole array.
+
+For Eg , arr[]={1,2,3,4,5,6,7} , k=2
+*/
+
+#include <iostream>
+using namespace std;
+// Function to Reverse the array
+void Reverse(int arr[], int start, int end)
+{
+  while (start <= end)
+  {
+    int temp = arr[start];
+    arr[start] = arr[end];
+    arr[end] = temp;
+    start++;
+    end--;
+  }
+}
+// Function to Rotate k elements to right
+void Rotateeletoright(int arr[], int n, int k)
+{
+  // Reverse first n-k elements
+  Reverse(arr, 0, n - k - 1);
+  // Reverse last k elements
+  Reverse(arr, n - k, n - 1);
+  // Reverse whole array
+  Reverse(arr, 0, n - 1);
+}
+int main()
+{
+  int arr[] = {1, 2, 3, 4, 5, 6, 7};
+  int n = 7;
+  int k = 2;
+  Rotateeletoright(arr, n, k);
+  cout << "After Rotating the k elements to right ";
+  for (int i = 0; i < n; i++)
+    cout << arr[i] << " ";
+  cout << endl;
+  return 0;
+}
+/*
+Initial Array:
+arr = [1, 2, 3, 4, 5, 6, 7]
+n = 7
+k = 2
+
+Step 1: Reverse the first n-k elements
+Before Reverse:
+[1, 2, 3, 4, 5, 6, 7]
+
+After Reverse (Reverse first 5 elements):
+[5, 4, 3, 2, 1, 6, 7]
+
+Step 2: Reverse the last k elements
+We reverse the elements from index n-k to n-1 which is 5 to 6.
+Before Reverse:
+[5, 4, 3, 2, 1, 6, 7]
+
+After Reverse (Reverse last 2 elements):
+[5, 4, 3, 2, 1, 7, 6]
+
+Step 3: Reverse the whole array
+Now, we reverse the entire array from index 0 to n-1 which is 0 to 6.
+Before Reverse:
+[5, 4, 3, 2, 1, 7, 6]
+
+After Reverse:
+[6, 7, 1, 2, 3, 4, 5]
+
+Final Output:
+arr = [6, 7, 1, 2, 3, 4, 5]
+*/
