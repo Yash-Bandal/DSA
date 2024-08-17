@@ -132,6 +132,8 @@ void rightRotate(vector<int> &nums, int k)
     }
 };
 
+//Optimal solution that doesnt use temp array so no xtra space
+
 //Using Reversealgo
 /*
 Approach 2: Using ” Reversal Algorithm “
