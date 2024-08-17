@@ -16,6 +16,7 @@ void rotateArray(vector<int> &nums, int n, int k)
     for (int i = 0; i < n; i++)
     {
         temp[(i + k) % n] = nums[i];
+        //  temp[i] = nums[(i + k) % n];  //left rotate
     }
 
     // Copy elements back to the original array
