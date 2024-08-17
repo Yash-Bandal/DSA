@@ -14,6 +14,7 @@ void leftRotateArray(vector<int> &nums, int n, int k)
     for (int i = 0; i < n; i++)
     {
         temp[i] = nums[(i + k) % n];
+         //temp[(i + k) % n] = nums[i]; //right rotate
     }
 
     // Copy elements back to the original array
