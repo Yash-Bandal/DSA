@@ -7,7 +7,7 @@ void countFreq(int arr[], int n) {
     vector<bool> visited(n, false);
     int maxFreq = INT_MIN;   //not INT_MAX for max
     vector<int> maxFreqEle;
-
+ 
     int minFreq = INT_MAX; //not INT_MIN for min
     vector<int> minFreqEle;
 
