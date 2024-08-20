@@ -15,7 +15,7 @@ void countFreq(int arr[], int n) {
         if (visited[i]==true) {
             continue;
         }
-        
+         
         int count = 1;
 
         for (int j = i + 1; j < n; j++) {
