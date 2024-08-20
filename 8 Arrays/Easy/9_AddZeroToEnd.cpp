@@ -1,7 +1,4 @@
 //Brute Force
-
-
-
 #include <bits/stdc++.h>
 using namespace std;
 
