@@ -59,7 +59,7 @@ vector<int> moveZeros(int n, vector<int> a) {
     for (int i = 0; i < n; i++) {
         if (a[i] == 0) {
             j = i;
-            break;
+            break;   //u forget this break
         }
     }
 
@@ -69,7 +69,7 @@ vector<int> moveZeros(int n, vector<int> a) {
     //Move the pointers i and j
     //and swap accordingly:
     for (int i = j + 1; i < n; i++) {
-        if (a[i] != 0) {
+        if (a[i] != 0) {   //dont even forget this if braclets...
             swap(a[i], a[j]);
             j++;
         }
