@@ -39,4 +39,51 @@ int main()
 //Union of arr1 and arr2 is 
 2 3 4 5 
 
+
+//2 pointer
+
+#include <iostream>
+#include <vector>
+#include <algorithm> // for sort
+
+using namespace std;
+
+vector<int> findIntersection(vector<int>& nums1, vector<int>& nums2) {
+    // Sort both arrays
+    sort(nums1.begin(), nums1.end());
+    sort(nums2.begin(), nums2.end());
+
+    vector<int> intersection;
+    int i = 0, j = 0;
+
+    // Use two pointers to find the intersection
+    while (i < nums1.size() && j < nums2.size()) {
+        if (nums1[i] < nums2[j]) {
+            i++;
+        } else if (nums1[i] > nums2[j]) {
+            j++;
+        } else {
+            // If both elements are equal, add to the intersection
+            intersection.push_back(nums1[i]);
+            i++;
+            j++;
+        }
+    }
+
+    return intersection;
+}
+
+int main() {
+    vector<int> nums1 = {1, 2, 2, 3, 4};
+    vector<int> nums2 = {2, 2, 3, 5};
+
+    vector<int> intersection = findIntersection(nums1, nums2);
+
+    cout << "Intersection: ";
+    for (int num : intersection) {
+        cout << num << " ";
+    }
+
+    return 0;
+}    
   
