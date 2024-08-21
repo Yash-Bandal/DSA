@@ -78,4 +78,139 @@ int main()
   return 0;
 }
 
+//Two pointers
+#include <bits/stdc++.h>
 
+using namespace std;
+
+vector<int> FindUnion(int arr1[], int arr2[], int n, int m) {
+    int i = 0, j = 0; // pointers
+    vector<int> Union; // Union vector
+
+    while (i < n && j < m) {
+        if (arr1[i] <= arr2[j]) // Case 1 and 2
+        {
+            if (Union.size() == 0 || Union.back() != arr1[i])
+                Union.push_back(arr1[i]);
+            i++;
+        } else // case 3
+        {
+            if (Union.size() == 0 || Union.back() != arr2[j])
+                Union.push_back(arr2[j]);
+            j++;
+        }
+    }
+    
+    while (i < n) // If any element left in arr1
+    {
+        if (Union.back() != arr1[i])
+            Union.push_back(arr1[i]);
+        i++;
+    }
+    
+    while (j < m) // If any element left in arr2
+    {
+        if (Union.back() != arr2[j])
+            Union.push_back(arr2[j]);
+        j++;
+    }
+    
+    return Union;
+}
+
+int main() {
+    int n = 10, m = 7;
+    int arr1[] = {1, 2, 3, 4, 5};
+    int arr2[] = {2, 3, 4, 4, 5, 6}; 
+    vector<int> Union = FindUnion(arr1, arr2, n, m);
+    
+    cout << "Union of arr1 and arr2 is  " << endl;
+    for (auto &val: Union)
+        cout << val << " ";
+        
+    return 0;
+}
+
+
+/*
+Input:
+- arr1[] = {1, 2, 3, 4, 5}
+- arr2[] = {2, 3, 4, 4, 5, 6}
+- n = 5, m = 6
+
+Initial Setup:
+- i = 0 (points to the first element of arr1)
+- j = 0 (points to the first element of arr2)
+- Union = {}
+
+Dry Run:
+
+Step 1:
+- Compare arr1[i] = 1 with arr2[j] = 2
+- Since 1 <= 2, check if Union is empty or last element in Union is not 1.
+- Add 1 to Union, increment i.
+- Union = {1}, i = 1, j = 0
+
+Step 2:
+- Compare arr1[i] = 2 with arr2[j] = 2
+- Since 2 <= 2, check if last element in Union is not 2.
+- Add 2 to Union, increment i.
+- Union = {1, 2}, i = 2, j = 0
+
+Step 3:
+- Compare arr1[i] = 3 with arr2[j] = 2
+- Since 3 > 2, check if last element in Union is not 2.
+- Since 2 is already in Union, increment j.
+- Union = {1, 2}, i = 2, j = 1
+
+Step 4:
+- Compare arr1[i] = 3 with arr2[j] = 3
+- Since 3 <= 3, check if last element in Union is not 3.
+- Add 3 to Union, increment i.
+- Union = {1, 2, 3}, i = 3, j = 1
+
+Step 5:
+- Compare arr1[i] = 4 with arr2[j] = 3
+- Since 4 > 3, check if last element in Union is not 3.
+- Since 3 is already in Union, increment j.
+- Union = {1, 2, 3}, i = 3, j = 2
+
+Step 6:
+- Compare arr1[i] = 4 with arr2[j] = 4
+- Since 4 <= 4, check if last element in Union is not 4.
+- Add 4 to Union, increment i.
+- Union = {1, 2, 3, 4}, i = 4, j = 2
+
+Step 7:
+- Compare arr1[i] = 5 with arr2[j] = 4
+- Since 5 > 4, check if last element in Union is not 4.
+- Since 4 is already in Union, increment j.
+- Union = {1, 2, 3, 4}, i = 4, j = 3
+
+Step 8:
+- Compare arr1[i] = 5 with arr2[j] = 4
+- Since 5 > 4, check if last element in Union is not 4.
+- Since 4 is already in Union, increment j.
+- Union = {1, 2, 3, 4}, i = 4, j = 4
+
+Step 9:
+- Compare arr1[i] = 5 with arr2[j] = 5
+- Since 5 <= 5, check if last element in Union is not 5.
+- Add 5 to Union, increment i.
+- Union = {1, 2, 3, 4, 5}, i = 5, j = 4
+
+Step 10:
+- i has reached the end of arr1, check remaining elements in arr2.
+- Compare arr2[j] = 5 with Union.back() = 5.
+- Since 5 is already in Union, increment j.
+- Union = {1, 2, 3, 4, 5}, i = 5, j = 5
+
+Step 11:
+- Compare arr2[j] = 6 with Union.back() = 5.
+- Add 6 to Union.
+- Union = {1, 2, 3, 4, 5, 6}, j = 6
+
+Final Union Vector:
+- Union = {1, 2, 3, 4, 5, 6}
+
+*/
