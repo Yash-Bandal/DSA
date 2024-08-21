@@ -87,3 +87,5 @@ int main() {
     return 0;
 }    
   
+//TC=O(N1+N2)
+//SC O(1)
