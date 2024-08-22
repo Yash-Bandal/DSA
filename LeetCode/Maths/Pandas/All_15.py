@@ -116,3 +116,18 @@ def pivotTable(weather: pd.DataFrame) -> pd.DataFrame:
 
     return df
 
+#2890. Reshape Data: Melt
+import pandas as pd
+
+def meltTable(report: pd.DataFrame) -> pd.DataFrame:
+   return pd.melt(report, id_vars=['product'],var_name='quarter', value_name='sales')
+
+
+#-----------------------------------------------------------
+#Advanced Techniques
+#2891. Method Chaining
+#Write a solution to list the names of animals that weigh strictly more than 100 kilograms.
+import pandas as pd
+
+def findHeavyAnimals(animals: pd.DataFrame) -> pd.DataFrame:
+    return animals[animals['weight'] > 100].sort_values(['weight'],ascending=False)[['name']]
