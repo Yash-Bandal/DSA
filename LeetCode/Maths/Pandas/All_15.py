@@ -12,3 +12,10 @@ def getDataframeSize(players: pd.DataFrame) -> List[int]:
     row_count=players.shape[0]
     col_count=players.shape[1]
     return [row_count,col_count]
+
+#2879. Display the First Three Rows
+import pandas as pd
+
+def selectFirstRows(employees: pd.DataFrame) -> pd.DataFrame:
+    df=employees.head(3)
+    return df
