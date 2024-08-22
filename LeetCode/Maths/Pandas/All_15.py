@@ -101,5 +101,18 @@ def fillMissingValues(products: pd.DataFrame) -> pd.DataFrame:
 
 -----------------------------------------------------------
 #Table Reshaping
+#2888. Reshape Data: Concatenate
+import pandas as pd
 
+def concatenateTables(df1: pd.DataFrame, df2: pd.DataFrame) -> pd.DataFrame:
+    return pd.concat([df1,df2])
+
+
+#2889. Reshape Data: Pivot
+import pandas as pd
+
+def pivotTable(weather: pd.DataFrame) -> pd.DataFrame:
+    df = weather.pivot(index = "month", columns = "city", values = 'temperature')
+
+    return df
 
