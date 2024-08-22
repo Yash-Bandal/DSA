@@ -61,5 +61,16 @@ import pandas as pd
 def modifySalaryColumn(employees: pd.DataFrame) -> pd.DataFrame:
     employees["salary"]=2*employees["salary"]
     return employees
+
+
+#2885. Rename Columns
+import pandas as pd
+
+def renameColumns(students: pd.DataFrame) -> pd.DataFrame:
+     students.rename(columns={'id': 'student_id',
+    'first': 'first_name',
+    'last': 'last_name',
+    'age': 'age_in_years'}, inplace=True)
+     return students
     
 
