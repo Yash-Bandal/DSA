@@ -1,3 +1,4 @@
+#Pandas Data Structure
 #2877. Create a DataFrame from List
 import pandas as pd
 
@@ -5,7 +6,10 @@ def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
     df=pd.DataFrame(student_data,columns=["student_id","age"])
     return df;
 
+--------------------------------------------------------------------------------
 
+
+#Data Inspection
 #2878. Get the Size of a DataFrame
 import pandas as pd
 
@@ -21,8 +25,9 @@ import pandas as pd
 def selectFirstRows(employees: pd.DataFrame) -> pd.DataFrame:
     df=employees.head(3)
     return df
-
-
+    
+-----------------------------------------------------------------------
+#Data Selecting
 #2880. Select Data
 import pandas as pd
 
@@ -41,11 +46,15 @@ def createBonusColumn(employees: pd.DataFrame) -> pd.DataFrame:
     employees['bonus'] = employees['salary'] * 2
     return employees
 
+--------------------------------------------------------------
+
+#Data Cleaning
 #2882. Drop Duplicate Rows
 import pandas as pd
 
 def dropDuplicateEmails(customers: pd.DataFrame) -> pd.DataFrame:
     return customers.drop_duplicates('email')
+
 
 #2883. Drop Missing Data
 import pandas as pd
@@ -80,5 +89,17 @@ import pandas as pd
 def changeDatatype(students: pd.DataFrame) -> pd.DataFrame:
     students=students.astype({'grade':int})
     return students
-    
+
+
+#2887. Fill Missing Data
+import pandas as pd
+
+def fillMissingValues(products: pd.DataFrame) -> pd.DataFrame:
+    products["quantity"].fillna(0,inplace=True)
+    return products
+
+
+-----------------------------------------------------------
+#Table Reshaping
+
 
