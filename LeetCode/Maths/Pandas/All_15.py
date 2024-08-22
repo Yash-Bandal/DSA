@@ -5,6 +5,7 @@ def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
     df=pd.DataFrame(student_data,columns=["student_id","age"])
     return df;
 
+
 #2878. Get the Size of a DataFrame
 import pandas as pd
 
@@ -13,12 +14,14 @@ def getDataframeSize(players: pd.DataFrame) -> List[int]:
     col_count=players.shape[1]
     return [row_count,col_count]
 
+
 #2879. Display the First Three Rows
 import pandas as pd
 
 def selectFirstRows(employees: pd.DataFrame) -> pd.DataFrame:
     df=employees.head(3)
     return df
+
 
 #2880. Select Data
 import pandas as pd
@@ -29,4 +32,25 @@ def selectData(students: pd.DataFrame) -> pd.DataFrame:
      return students.loc[students["student_id"] == 101, "name" :]
     # # OR
     # return students[students['student_id'] == 101][['name', 'age']]:
+
+
+#2881. Create a New Column
+import pandas as pd
+
+def createBonusColumn(employees: pd.DataFrame) -> pd.DataFrame:
+    employees['bonus'] = employees['salary'] * 2
+    return employees
+
+#2882. Drop Duplicate Rows
+import pandas as pd
+
+def dropDuplicateEmails(customers: pd.DataFrame) -> pd.DataFrame:
+    return customers.drop_duplicates('email')
+
+#2883. Drop Missing Data
+import pandas as pd
+
+def dropMissingData(students: pd.DataFrame) -> pd.DataFrame:
+    newDf=students.dropna(subset="name");
+    return newDf
     
