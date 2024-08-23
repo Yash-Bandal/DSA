@@ -7,7 +7,7 @@ vector<int> FindUnion(int arr1[], int arr2[], int n, int m)
     vector<int> ans;
 
     vector<int> visited(m, 0);
-    for (int i = 0; i < n; i++) //for every i check j
+    for (int i = 0; i < n; i++) //for every i check j..that is for every element in first arr check the seond corresponding array
     {
         for (int j = 0; j < m; j++)
         {
@@ -15,7 +15,7 @@ vector<int> FindUnion(int arr1[], int arr2[], int n, int m)
             if (arr1[i] == arr2[j] && visited[j] == 0)
             {
                 ans.push_back(arr1[i]);
-                visited[j] = 1;
+                visited[j] = 1;  //dont forget break
                 break;
             }
             if (arr2[j] > arr1[i])
