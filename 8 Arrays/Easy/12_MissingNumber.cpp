@@ -50,7 +50,7 @@ int main()
 using namespace std;
 int missingNumber(vector<int>&a, int N) {
 
-    int hash[N + 2] = {0}; //hash array
+    int hash[N + 2] = {0}; //hash array starts from 0 + we need 1 space extra
 
     // storing the frequencies:
     for (int i = 0; i < N ; i++)
