@@ -13,7 +13,7 @@ int missingNumber(vector<int>&a, int N) {
 
         //Search the element using linear search:
         for (int j = 0; j < N - 1; j++) {
-            if (a[j] == i) {
+            if (a[j] == i) {   //not arr[i]  its i
 
                 // i is present in the array:
                 flag = 1;
