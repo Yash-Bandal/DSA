@@ -7,7 +7,7 @@ vector<int> FindUnion(int arr1[], int arr2[], int n, int m)
     vector<int> ans;
 
     vector<int> visited(m, 0);
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++) //for every i check j
     {
         for (int j = 0; j < m; j++)
         {
