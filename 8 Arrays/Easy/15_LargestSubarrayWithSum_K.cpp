@@ -30,9 +30,13 @@ int main()
     return 0;
 }
 
-//TC =O(N^3)//not applicable for big input
+/*
+Time Complexity: O(N3) approx., where N = size of the array.
+Reason: We are using three nested loops, each running approximately N times.
 
-
+Space Complexity: O(1) as we are not using any extra space
+*/
+//iterations reduce 5 4 3 2 1 visualize easy
 
 
 
@@ -123,3 +127,137 @@ Final Result:
     The length of the longest subarray with sum = 10 is: 3
     The subarray is: {2, 3, 5}
 */
+---------------------------------------------------------------------------------------
+
+
+//Optimizing the Naive Approach (Using two loops): 
+/*
+Intuition: If we carefully observe, we can notice that to get the sum of the current 
+ subarray we just need to add the current element(i.e. arr[j]) to the sum of the previous subarray i.e. arr[i….j-1].
+
+Assume previous subarray = arr[i……j-1]
+current subarray = arr[i…..j]
+Sum of arr[i….j] = (sum of arr[i….j-1]) + arr[j]
+
+This is how we can remove the third loop and while moving the j pointer, we can calculate the sum.
+*/
+    
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int getLongestSubarray(vector<int>& a, long long k) {
+    int n = a.size(); // size of the array.
+
+    int len = 0;
+    for (int i = 0; i < n; i++) { // starting index
+        long long s = 0; // Sum variable
+        for (int j = i; j < n; j++) { // ending index
+            // add the current element to
+            // the subarray a[i...j-1]:
+            s += a[j];
+
+            if (s == k)
+                len = max(len, j - i + 1);
+        }
+    }
+    return len;
+}
+
+int main()
+{
+    vector<int> a = {2, 3, 5, 1, 9};
+    long long k = 10;
+    int len = getLongestSubarray(a, k);
+    cout << "The length of the longest subarray is: " << len << "\n";
+    return 0;
+}
+
+/*
+Dry Run of the getLongestSubarray function:
+
+Input:
+- Array: {2, 3, 5, 1, 9}
+- Target Sum (k): 10
+
+Steps:
+
+1. Initialization:
+   - n = 5 (size of the array)
+   - len = 0 (to store the maximum length of subarray)
+
+2. Outer Loop: i = 0 (starting index)
+
+   a. Inner Loop: j = 0
+      - s = 0 + 2 = 2
+      - s != k, len remains 0
+
+   b. Inner Loop: j = 1
+      - s = 2 + 3 = 5
+      - s != k, len remains 0
+
+   c. Inner Loop: j = 2
+      - s = 5 + 5 = 10
+      - s == k, len = max(0, 2 - 0 + 1) = 3
+
+   d. Inner Loop: j = 3
+      - s = 10 + 1 = 11
+      - s != k, len remains 3
+
+   e. Inner Loop: j = 4
+      - s = 11 + 9 = 20
+      - s != k, len remains 3
+
+3. Outer Loop: i = 1 (starting index)
+
+   a. Inner Loop: j = 1
+      - s = 0 + 3 = 3
+      - s != k, len remains 3
+
+   b. Inner Loop: j = 2
+      - s = 3 + 5 = 8
+      - s != k, len remains 3
+
+   c. Inner Loop: j = 3
+      - s = 8 + 1 = 9
+      - s != k, len remains 3
+
+   d. Inner Loop: j = 4
+      - s = 9 + 9 = 18
+      - s != k, len remains 3
+
+4. Outer Loop: i = 2 (starting index)
+
+   a. Inner Loop: j = 2
+      - s = 0 + 5 = 5
+      - s != k, len remains 3
+
+   b. Inner Loop: j = 3
+      - s = 5 + 1 = 6
+      - s != k, len remains 3
+
+   c. Inner Loop: j = 4
+      - s = 6 + 9 = 15
+      - s != k, len remains 3
+
+5. Outer Loop: i = 3 (starting index)
+
+   a. Inner Loop: j = 3
+      - s = 0 + 1 = 1
+      - s != k, len remains 3
+
+   b. Inner Loop: j = 4
+      - s = 1 + 9 = 10
+      - s == k, len = max(3, 4 - 3 + 1) = 3
+
+6. Outer Loop: i = 4 (starting index)
+
+   a. Inner Loop: j = 4
+      - s = 0 + 9 = 9
+      - s != k, len remains 3
+
+Final Output:
+- The length of the longest subarray with sum k = 10 is 3.
+*/
+
