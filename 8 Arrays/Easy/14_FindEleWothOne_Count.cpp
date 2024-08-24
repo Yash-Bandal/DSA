@@ -42,3 +42,102 @@ Reason: For every element, we are performing a linear search to count its occurr
 Space Complexity: O(1) as we are not using any extra space.
 */
 
+
+//Better Approach(Using Hashing): 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int getSingleElement(vector<int> &arr) {
+
+    int n = arr.size();
+
+    // Find the maximum element: so as to declare hash array size ..here 4 is large num so we requre 4 size hash arr
+    int maxi = arr[0];
+    for (int i = 0; i < n; i++) {
+        maxi = max(maxi, arr[i]);
+    }
+
+    // Declare hash array of size maxi+1  ..this is mapping like adding frequencies
+    // And hash the given array:
+    vector<int> hash(maxi + 1, 0);  //+1 bcoz 5 values of hash 0 0 0 0 0 initial 
+    for (int i = 0; i < n; i++) {
+        hash[arr[i]]++;
+    }
+
+    //Find the single element and return the answer:
+    for (int i = 0; i < n; i++) {
+        if (hash[arr[i]] == 1)
+            return arr[i];
+    }
+
+    //This line will never execute
+    //if the array contains a single element.
+    return -1;
+}
+
+int main()
+{
+    vector<int> arr = {4, 1, 2, 1, 2};
+    int ans = getSingleElement(arr);
+    cout << "The single element is: " << ans << endl;
+    return 0;
+}
+/*
+Explanation of the Hash Array:
+
+1. Input Array: {4, 1, 2, 1, 2}
+2. Maximum Element (`maxi`): 4
+
+Step 1: Initialize Hash Array
+
+- Hash Array Size: `maxi + 1 = 4 + 1 = 5`
+- Initial Hash Array:
+  Index:  0  1  2  3  4
+  Value:  0  0  0  0  0
+
+Step 2: Populate the Hash Array
+
+We iterate through the input array and increment the corresponding index in the hash array.
+
+1. First element (4):
+   - Increment `hash[4]` by 1:
+     Index:  0  1  2  3  4
+     Value:  0  0  0  0  1
+
+2. Second element (1):
+   - Increment `hash[1]` by 1:
+     Index:  0  1  2  3  4
+     Value:  0  1  0  0  1
+
+3. Third element (2):
+   - Increment `hash[2]` by 1:
+     Index:  0  1  2  3  4
+     Value:  0  1  1  0  1
+
+4. Fourth element (1):
+   - Increment `hash[1]` by 1:
+     Index:  0  1  2  3  4
+     Value:  0  2  1  0  1
+
+5. Fifth element (2):
+   - Increment `hash[2]` by 1:
+     Index:  0  1  2  3  4
+     Value:  0  2  2  0  1
+
+Step 3: Identify the Single Element
+
+- Index 0: `hash[0] = 0` → No element 0 in the input array.
+- Index 1: `hash[1] = 2` → The element 1 occurs twice.
+- Index 2: `hash[2] = 2` → The element 2 occurs twice.
+- Index 3: `hash[3] = 0` → No element 3 in the input array.
+- Index 4: `hash[4] = 1` → The element 4 occurs exactly once.
+
+Final Hash Array:
+  Index:  0  1  2  3  4
+  Value:  0  2  2  0  1
+
+Conclusion:
+The hash array helps in counting occurrences of each element. The size `maxi + 1` ensures that every element can be indexed properly, allowing us to find the element that appears exactly once.
+*/
+
