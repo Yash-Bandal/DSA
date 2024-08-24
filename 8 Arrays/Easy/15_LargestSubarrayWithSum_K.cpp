@@ -174,7 +174,7 @@ int main()
     return 0;
 }
 
-/*
+/*  O(N^2)
 Dry Run of the getLongestSubarray function:
 
 Input:
