@@ -82,3 +82,47 @@ public:
         
     }
 };
+
+
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        int N = nums.size();
+        
+        // Use a vector to dynamically allocate memory
+        vector<int> hash(N + 1, 0);
+
+        // Populate the hash array
+        for (int i = 0; i < N; i++)
+            hash[nums[i]]++;
+
+        // Find the missing number
+        for (int i = 0; i <= N; i++) {  // Use i <= N because the missing number could be 0 as well
+            if (hash[i] == 0) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+};
+
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+
+        int N=nums.size();
+    int xor1 = 0, xor2 = 0;
+
+//itwrate through array and later for xor1 which need xtra included missing num..xor1 ^with N..the last num
+    for (int i = 0; i < N ; i++) {
+        xor2 = xor2 ^ nums[i]; // XOR of array elements
+        xor1 = xor1 ^ i ; //XOR up to [1...N-1]
+    }
+    xor1 = xor1 ^ N; //XOR up to [1...N]
+
+    return (xor1 ^ xor2); // the missing number
+    }
+};
+
+
