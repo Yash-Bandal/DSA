@@ -3,7 +3,7 @@ using namespace std;
 
 int getLongestSubarray(vector<int>& a, long long k) {
     int n = a.size(); // size of the array.
-
+ 
     int len = 0;
     for (int i = 0; i < n; i++) { // starting index
         for (int j = i; j < n; j++) { // ending index
