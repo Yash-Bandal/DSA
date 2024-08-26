@@ -64,3 +64,91 @@ Output: This is the answer for variant 2: [1, 3]
 
 //Time Complexity: O(N), where N = size of the array.
 //Reason: The loop runs N times in the worst case and searching in a hashmap takes O(1) generally. So the time complexity is O(N).
+
+ //Two pointer
+// class Solution {
+// public:
+//     vector<int> twoSum(vector<int>& nums, int target) {
+//         sort(nums.begin(),nums.end());
+//         int left=0;
+//         int right=nums.size()-1;
+        
+//         while(left<right){
+//             int sum= nums[left] +nums[right];
+//             if(sum ==target){
+//                 return {left,right};
+//             }
+//             else if(sum<target){
+//                 left++;
+//             }
+//             else{
+//                 right--;
+//             }
+//         }
+
+ 
+//         return {-1,-1};
+//     }
+// };
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        // Create a vector of pairs where each pair contains (value, original index)
+        vector<pair<int, int>> indexed_nums;
+        for (int i = 0; i < nums.size(); ++i) {
+            indexed_nums.push_back({nums[i], i});
+        }
+        
+        // Sort based on the values
+        sort(indexed_nums.begin(), indexed_nums.end());
+        
+        int left = 0;
+        int right = indexed_nums.size() - 1;
+        
+        while (left < right) {
+            int sum = indexed_nums[left].first + indexed_nums[right].first;
+            if (sum == target) {
+                // Return the original indices
+                return {indexed_nums[left].second, indexed_nums[right].second};
+            } else if (sum < target) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+        
+        return {-1, -1};
+    }
+};
+
+/*The issue with your two-pointer approach in the twoSum function is that you sort the nums array, which 
+changes the indices of the elements. As a result, returning {left, right} will not correspond to the original
+ indices in the unsorted nums array.*/
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+string twoSum(int n, vector<int> &arr, int target) {
+    sort(arr.begin(), arr.end());
+    int left = 0, right = n - 1;
+    while (left < right) {
+        int sum = arr[left] + arr[right];
+        if (sum == target) {
+            return "YES";
+        }
+        else if (sum < target) left++;
+        else right--;
+    }
+    return "NO";
+}
+
+int main()
+{
+    int n = 5;
+    vector<int> arr = {2, 6, 5, 8, 11};
+    int target = 14;
+    string ans = twoSum(n, arr, target);
+    cout << "This is the answer for variant 1: " << ans << endl;
+    return 0;
+}
