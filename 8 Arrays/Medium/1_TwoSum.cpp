@@ -2,7 +2,7 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-
+ 
 int getLongestSubarray(vector<int>& a, long long k) {
     int n = a.size(); // size of the array.
 
