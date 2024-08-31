@@ -2,7 +2,7 @@
 using namespace std;
 
 void sortArray(vector<int>& arr, int n) {
-
+ 
     int cnt0 = 0, cnt1 = 0, cnt2 = 0;
 
     for (int i = 0; i < n; i++) {
