@@ -21,7 +21,7 @@ int getLongestSubarray(vector<int>& a, long long k) {
         }
     }
     return len;
-}
+} 
 
 int main()
 {
