@@ -19,7 +19,6 @@ void sortArray(vector<int>& arr, int n) {
     for (int i = cnt0 + cnt1; i < n; i++) arr[i] = 2; // replacing 2's
 
 }
-
 int main()
 {
     int n = 6;
