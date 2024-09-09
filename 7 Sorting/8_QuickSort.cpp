@@ -12,7 +12,7 @@ int makePartition(vector<int> &arr, int low, int high)
 
     while (i < j)
     {
-        while (arr[i] <= pivot && i <= high - 1)
+        while (arr[i] <= pivot && i <= high - 1) //increment i until you find element higher than pivot..till that when small element increment i..
         {
             i++;
         }
