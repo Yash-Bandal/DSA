@@ -28,7 +28,7 @@ int makePartition(vector<int> &arr, int low, int high)
             swap(arr[i], arr[j]);
         }
     }
-    swap(arr[j], arr[low]);  //font swap pivot..because we have set it to arr[low]..which changesafter every division..thus pivot also changes
+    swap(arr[j], arr[low]);  //dont swap pivot..because we have set it to arr[low]..which changesafter every division..thus pivot also changes
     return j;  //if you pass pivot..only the first pivot is considered
 }
 
