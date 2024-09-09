@@ -22,6 +22,7 @@ int makePartition(vector<int> &arr, int low, int high)
             // j++; silly
             j--;
         }
+        //at this point i point and is stopped at element greater than pivot and j stopped at element smaller than pivot
         if (i < j)
         {
             swap(arr[i], arr[j]);
