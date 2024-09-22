@@ -307,7 +307,7 @@ void printPattern13_2(int n)
 // **
 // *
 
-void printPattern14(int n)
+void printPattern14(int n)  //easy
 { // my sol
     for (int i = 0; i < n; i++)
     {
