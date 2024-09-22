@@ -147,7 +147,7 @@ void printPattern9(int n)
 // 12
 // 1
 
-void printPattern10(int n)
+void printPattern10(int n)  //Remeber at i=0 and n=5 we have to print [4 1 4]..that is generate formula w.r.t i and n to print all 4 spaecs 1 *4 spc in continuos
 {
     for (int i = 0; i < n; i++)
     {
