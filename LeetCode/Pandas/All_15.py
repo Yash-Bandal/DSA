@@ -8,7 +8,7 @@ def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
 
 --------------------------------------------------------------------------------
 
- 
+  
 #Data Inspection
 #2878. Get the Size of a DataFrame
 import pandas as pd
