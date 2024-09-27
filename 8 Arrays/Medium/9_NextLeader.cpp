@@ -80,4 +80,24 @@ int main() {
 
 
 ---------------------------------------------------------------------------------
+    What is the output of the following C++ code?
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    char * a = "Hello\0World";
+    cout << strlen(a) << endl;
+    return 0;
+}
+Options: Pick one correct answer from below
+
+11
+
+5
+
+6
+
+Error
+    The function strlen() calculates the length of the string up to the first null character (\0).
     
