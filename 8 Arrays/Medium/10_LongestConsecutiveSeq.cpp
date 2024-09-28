@@ -63,6 +63,7 @@ int longestSuccessiveElements(vector<int>&a) {
             cnt += 1;
             lastSmaller = a[i];
         }
+            //reset if not in sequence
         else if (a[i] != lastSmaller) {
             cnt = 1;
             lastSmaller = a[i];
