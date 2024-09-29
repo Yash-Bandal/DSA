@@ -2,7 +2,6 @@
 //-10 is just temporary number..dont use -1 as 1 testcase has that num
 class Solution {
 private:
-
     void markRow(vector<vector<int>> &matrix, int n, int m, int i) {
         for(int j=0;j<m;j++){
             if(matrix[i][j] != 0){
