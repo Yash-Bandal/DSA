@@ -83,4 +83,52 @@ int main() {
 
 }
 
+//leet
+// class Solution {
+// public:
+//     void rotate(vector<vector<int>>& matrix) {
+//         int n = matrix.size();
+//         int m = matrix[0].size();
+//         //add rows to columns
+//         vector<vector<int>> rotated(n, vector<int>(n, 0));
+//         for (int i = 0; i < n; i++) {
+//             for (int j = 0; j < m; j++) {
+//                 rotated[j][n - i - 1] = matrix[i][j];
+//             }
+//         }
+
+//        //copy new matrix to original..sc=O(n^2)
+//         for (int i = 0; i < n; i++) {
+//             for (int j = 0; j < m; j++) {
+//                 matrix[i][j] = rotated[i][j];
+//             }
+//         }
+//     }
+// };
+
+class Solution {
+public:
+    void rotate(vector<vector<int>>& matrix) {
+        int n = matrix.size();
+        int m = matrix[0].size();
+
+        // find transpose
+        // for (int i = 0; i < n; i++) {
+        //     for (int j = i + 1; j < n; j++) {
+        //         swap(matrix[i][j], matrix[j][i]);
+        //     }
+        // }
+        // or
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < i; j++) {
+                swap(matrix[i][j], matrix[j][i]);
+            }
+        }
+        // reverse rows
+        for (int i = 0; i < n; i++) {
+            reverse(matrix[i].begin(), matrix[i].end());
+        }
+    }
+};
+
 
