@@ -582,3 +582,70 @@ check dry run on gpt
 
 
 */
+    ///////////////////////////////////////////////////////////
+//Print subarray
+
+#include <bits/stdc++.h>
+using namespace std;
+
+pair<int, vector<int>> getLongestSubarrayWithSum(vector<int>& a, long long k) {
+    int n = a.size(); // size of the array
+
+    int left = 0, right = 0; // two pointers
+    long long sum = a[0];
+    int maxLen = 0;
+    int start = 0, end = 0; // to store the indices of the subarray
+
+    while (right < n) {
+        // If sum > k, reduce the subarray from left until sum becomes less or equal to k
+        while (left <= right && sum > k) {
+            sum -= a[left];
+            left++;
+        }
+
+        // If sum == k, update maxLen and store the indices
+        if (sum == k) {
+            if (right - left + 1 > maxLen) {
+                maxLen = right - left + 1;
+                start = left;
+                end = right;
+            }
+        }
+
+        // Move the right pointer forward
+        right++;
+        if (right < n) sum += a[right];
+    }
+
+    // Prepare the subarray
+    vector<int> subarray;
+    if (maxLen > 0) {
+        subarray.insert(subarray.end(), a.begin() + start, a.begin() + end + 1);
+    }
+
+    return {maxLen, subarray};
+}
+
+int main() {
+    vector<int> a = {2, 3, 5, 1, 9};
+    long long k = 10;
+
+    // Get the length and subarray with the sum k
+    auto result = getLongestSubarrayWithSum(a, k);
+    int len = result.first;
+    vector<int> subarray = result.second;
+
+    // Output the result
+    cout << "The length of the longest subarray is: " << len << "\n";
+    if (len > 0) {
+        cout << "The subarray is: ";
+        for (int num : subarray) {
+            cout << num << " ";
+        }
+        cout << "\n";
+    } else {
+        cout << "No subarray found with the sum " << k << "\n";
+    }
+
+    return 0;
+}
