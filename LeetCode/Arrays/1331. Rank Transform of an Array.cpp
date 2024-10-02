@@ -47,7 +47,7 @@ public:
             it.second=rank;
             rank++;
         }
-
+      ////this step just finds if ele present in map and place in ans
         vector<int> ans(arr.size());
         for(int i=0;i<arr.size();i++){
             ans[i]=mpp[arr[i]];
