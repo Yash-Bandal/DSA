@@ -28,9 +28,9 @@ public:
         return res;
     }
 };
-
+------------------------------------------------------------------
+    
 //Variation 1..return element at a given row and col
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -60,9 +60,10 @@ int main()
     return 0;
 }
         
-        
-//2 Given the row number n. Print the n-th row of Pascal’s triangle.
 
+=----------------------------------------------------------------------
+//2 Given the row number n. Print the n-th row of Pascal’s triangle.
+//Brute 1
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -91,3 +92,33 @@ int main()
     pascalTriangle(n);
     return 0;
 }
+
+//Opt
+\
+#include <bits/stdc++.h>
+using namespace std;
+
+void pascalTriangle(int n) {
+    long long ans = 1;
+    cout << ans << " "; // printing 1st element
+
+    //Printing the rest of the part:
+    for (int i = 1; i < n; i++) {
+        ans = ans * (n - i);
+        ans = ans / i;
+        cout << ans << " ";
+    }
+    cout << endl;
+}
+
+int main()
+{
+    int n = 5;
+    pascalTriangle(n);
+    return 0;
+}
+
+
+
+//Variation 3
+//Brute
