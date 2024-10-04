@@ -54,4 +54,8 @@ int main()
     cout << "The upper bound is the index: " << ind << "\n";
     return 0;
 }
-
+//STL
+int upperBound(vector<int> &arr, int x, int n){
+            int ans=upper_bound(arr.begin(),arr.begin()+n,x)-arr.begin();
+				return ans;
+}
