@@ -45,3 +45,57 @@ public:
          return {first,last};
     }
 };
+
+
+//LB UB 2( * O)Log N
+class Solution {
+private:
+    int lowerBound(vector<int>& arr, int x, int n) {
+        int low = 0, high = n - 1;
+        int ans = n;
+
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            // maybe an answer
+            if (arr[mid] >= x) {
+                ans = mid;
+                // look for smaller index on the left
+                high = mid - 1;
+            } else {
+                low = mid + 1; // look on the right
+            }
+        }
+        return ans;
+    }
+    int upperBound(vector<int>& arr, int x, int n) {
+        int low = 0, high = n - 1;
+        int ans = n;
+
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            // maybe an answer
+            if (arr[mid] > x) {
+                ans = mid;
+                // look for smaller index on the left
+                high = mid - 1;
+            } else {
+                low = mid + 1; // look on the right
+            }
+        }
+        return ans;
+    }
+
+public:
+    vector<int> searchRange(vector<int>& nums, int target) {
+        int n = nums.size();
+        int lb = lowerBound(nums, target, n);
+        int ubInd = upperBound(nums, target, n);
+        if (lb == n || nums[lb] != target) {
+            return {-1, -1};
+        }
+        return {lb, ubInd - 1};
+    }
+};
+
+//Pure BS
+//O(Log n)
