@@ -1,5 +1,5 @@
-
-//2 pointers
+//Note O(log n) is good < than O(N) , than O(N2)
+//2 pointers  O(N)
 class Solution {
 public:
     vector<int> searchRange(vector<int>& nums, int target) {
