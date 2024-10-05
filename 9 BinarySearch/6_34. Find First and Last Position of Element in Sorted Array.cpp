@@ -99,3 +99,60 @@ public:
 
 //Pure BS
 //O(Log n)
+
+
+//Pure O(Log n) BS
+class Solution {
+    private:
+    //first occ
+    int firstOcc(vector<int>& arr, int x, int n) {
+        int low = 0, high = n - 1;
+        int first = -1;
+
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            // maybe an answer
+            if (arr[mid] == x) {
+                first = mid;
+              //eliminate right
+                high = mid - 1;
+            } else if(arr[mid] < x) {
+                low = mid + 1; // look on the right
+            }
+            else {
+                high=mid-1;
+            }
+        }
+        return first;
+    }
+    //last occ
+        int lastOcc(vector<int>& arr, int x, int n) {
+        int low = 0, high = n - 1;
+        int last = -1;
+
+        while (low <= high) {
+            int mid = (low + high) / 2;
+            // maybe an answer
+            if (arr[mid] == x) {
+                last = mid;
+              //eliminate right
+                low = mid + 1;
+            } else if(arr[mid] < x) {
+                low = mid + 1; // look on the right
+            }
+            else {
+                high=mid-1;
+            }
+        }
+        return last;
+    }
+public:
+    vector<int> searchRange(vector<int>& nums, int target) {
+
+        int n=nums.size();
+        int first=firstOcc(nums,target,n);
+        if(first == -1){return {-1,-1};}
+        int last=lastOcc(nums,target,n);
+        return {first,last};
+    }
+};
