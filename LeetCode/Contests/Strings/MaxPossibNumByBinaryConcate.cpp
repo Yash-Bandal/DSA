@@ -14,7 +14,7 @@ private:
         binaryStr = binaryStr.substr(binaryStr.find('1'));
         // this removes leading zeroes..mhnje 8 bit rep la first 000 astat te kadhne 
         /*
-        here 32 bit rep used so that big numebers can be handled ,,but we dont need 0s that are at first for small bumbers
+        here 32 bit rep used so that big numebers can be handled ,,but we dont need 0s that are at first for small numbers
         remvove
         1 = '1'
         2= '10'
@@ -27,7 +27,7 @@ private:
 public:
     int maxGoodNumber(vector<int>& nums) {
         int maxVal=INT_MIN;
-        //sort fot using all permutations possible
+        //sort for using all permutations possible
         sort(nums.begin(),nums.end());
         do{
             //concatanate
@@ -38,6 +38,7 @@ public:
             }
             //reconvert string to decimal integer
             int deci=stoi(concatenateBinary,0,2);
+            //2 here is base..2 binary 10 decimal 16 hexa
             //max shodhne
             maxVal=max(maxVal,deci);
         }while(next_permutation(nums.begin(),nums.end()));  //do for all permutations
