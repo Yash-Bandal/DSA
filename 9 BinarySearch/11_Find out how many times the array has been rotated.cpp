@@ -26,7 +26,7 @@ int main()
 //opt
 
 
-
+//Note : when want to return index dont use inbuilt function use manual function as we need index of minimum 
 #include <bits/stdc++.h>
 using namespace std;
 
