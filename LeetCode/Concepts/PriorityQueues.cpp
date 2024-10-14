@@ -1,4 +1,7 @@
 /* 
+
+Easy 
+
 Problem Setup:
 You are given an array or sequence of numbers, and you need to perform some operations that require repeated access to the maximum or minimum element. This is where a priority queue (heap) comes into play.
 
