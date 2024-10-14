@@ -1,5 +1,20 @@
 //Brute TLE
+/*
+Concept
 
+adding a vector withing maxHeap
+way 1:
+ priority_queue<int> maxHeap(nums.begin(), nums.end());
+
+way 2:
+  priority_queue<int> pq;
+     
+        for(int i=0;i<n;i++){
+            pq.push(nums[i]);
+        }
+
+
+*/
 class Solution {
 public:
     long long maxKelements(vector<int>& nums, int k) {
