@@ -66,5 +66,12 @@ void levelOrder(TreeNode* root) {
     }
 }
 -----------------------------------------------------------------------------
-  
-
+  /*
+TreeNode* root; is a pointer to a TreeNode. It stores the address where the actual TreeNode object is located.
+The actual value (val) and the pointers to the left and right children (left, right) are stored inside the TreeNode object itself, which is pointed to by the TreeNode*.
+Example:
+TreeNode* root = new TreeNode(5);
+In this case:
+root stores the address of the newly allocated TreeNode object. ...not only the top root but every time new root
+To access the value inside the node, you would use root->val, which gives you the value (5 in this case).
+*/
