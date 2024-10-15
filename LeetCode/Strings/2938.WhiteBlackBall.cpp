@@ -1,4 +1,7 @@
 //See last page of DSA 2 book
+/*
+Observe for such question swap count return and all...we have to play with element counts ..its easy ..just dry run on paper and observe pattern
+*/
 class Solution {
 public:
     long long minimumSteps(string s) {
