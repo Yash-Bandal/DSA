@@ -8,7 +8,7 @@ root->val = 5;     // Use `->` to access 'val' field of the object via the point
 
 //Node Structure
 struct TreeNode {
-    int val;               // Value of the node
+    int val;               // Value of the node-val 
     TreeNode* left;        // Pointer to the left child
     TreeNode* right;       // Pointer to the right child
 
