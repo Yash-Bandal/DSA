@@ -3,7 +3,7 @@
 using namespace std;
 
 int maxDistanceBruteForce(const string& s) {
-    int maxDistance = -1;  // Initialize to -1 to handle cases with no matching characters. 
+    int maxDistance = -1;  // Initialize to -1 to handle cases with no matching characters. .
     
     // Loop over all possible pairs of indices.
     for (int i = 0; i < s.length(); ++i) {
