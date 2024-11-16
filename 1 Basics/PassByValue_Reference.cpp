@@ -10,7 +10,7 @@ void addAndPrintSum(int &num1, int &num2)
     num2=50;
     cout << "Sum: " << num1 + num2 << endl;
 }
-
+ 
 int main()                                    //cin 
 {
     int a=70; //actual..copy sent above
