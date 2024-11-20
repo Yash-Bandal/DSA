@@ -1,7 +1,7 @@
 //Basic Fibo
 
 #include<bits/stdc++.h>
-using namespace std;
+using namespace std; 
 
 int main() {
   int size = 7;  //last index size-1..print till 
