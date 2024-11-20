@@ -11,7 +11,7 @@ void printPattern(int n)
         }
         cout << endl;
     }
-}
+} 
 // * * * *
 // * * * * 
 // * * * *
