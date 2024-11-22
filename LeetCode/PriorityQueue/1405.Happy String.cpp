@@ -10,7 +10,7 @@ public:
 
         // Push in pq pairs of count and character
         if (a > 0) {
-            pq.push({a, 'a'}); // Example input: a = 1, b = 1, c = 7
+            pq.push({a, 'a'}); // Example input: a = 1, b = 1, c = 7 
         }
         if (b > 0) {
             pq.push({b, 'b'});
