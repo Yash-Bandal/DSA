@@ -6,7 +6,7 @@ using namespace std;
 class Solution {
 public:
     string longestDiverseString(int a, int b, int c) {
-        priority_queue<pair<int, char>> pq;
+        priority_queue<pair<int, char>> pq; 
 
         // Push in pq pairs of count and character
         if (a > 0) {
