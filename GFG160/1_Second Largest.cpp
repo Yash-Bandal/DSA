@@ -6,7 +6,7 @@ public:
         int largest = -1, secondLargest = -1;  
           
         // Iterate over the array
-        for (int num : arr) {
+        for (int num : arr) { 
             // Update the largest and second largest 
             if (num > largest) {
                 secondLargest = largest; // Update second largest to the previous largest
