@@ -5,7 +5,7 @@ public:
         // Initialize variables for the largest and second largest
         int largest = -1, secondLargest = -1;    
           
-        // Iterate over the array
+        // Iterate over the array 
         for (int num : arr) { 
             // Update the largest and second largest 
             if (num > largest) {
