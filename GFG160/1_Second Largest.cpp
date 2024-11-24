@@ -14,7 +14,7 @@ public:
             } else if (num > secondLargest && num != largest) {
                 secondLargest = num;     // Update second largest
             }
-        }
+        } 
         
         // If secondLargest hasn't been updated, return -1 (no valid second largest)
         return secondLargest;
