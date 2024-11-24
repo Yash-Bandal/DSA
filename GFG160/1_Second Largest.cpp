@@ -1,6 +1,6 @@
 class Solution {
 public:
-    // Function to return the second largest element
+    // Function to return the second largest element 
     int getSecondLargest(vector<int> &arr) {
         // Initialize variables for the largest and second largest
         int largest = -1, secondLargest = -1;
