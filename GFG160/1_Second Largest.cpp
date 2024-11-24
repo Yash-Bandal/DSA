@@ -16,7 +16,7 @@ public:
             }
         } 
         
-        // If secondLargest hasn't been updated, return -1 (no valid second largest)
+        // If secondLargest hasn't been updated, return -1 (no valid second largest) 
         return secondLargest;
     }
 };
