@@ -5,7 +5,7 @@
 #include <algorithm>  // For std::lower_bound and std::upper_bound
 
 using namespace std;
-
+ 
 int main() {
             // 0  1  3  3  4  5  6  7 .....7 is ahead index..if value greater than 8 entered
     int a[] = {1, 2, 3, 4, 5, 7, 8};
