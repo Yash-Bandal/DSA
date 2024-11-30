@@ -1,7 +1,7 @@
 //leet 506
 
 
-/*
+/* 
 How most pair datatypes are used for most questions
  
 An array is given  and we need to perform changes in arrray preserving the index
