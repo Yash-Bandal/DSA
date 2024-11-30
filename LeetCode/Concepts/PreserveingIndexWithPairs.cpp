@@ -3,7 +3,7 @@
 
 /*
 How most pair datatypes are used for most questions
-
+ 
 An array is given  and we need to perform changes in arrray preserving the index
 
 if maxelem quest we use minHeaps prio ques with pairs
