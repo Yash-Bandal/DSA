@@ -7,7 +7,7 @@ public:
         // Loop to rotate `s` at most `n` times
         while (cnt < n) {
             // Check if `s` matches `goal` after current rotation
-            if (s == goal) return true;
+            if (s == goal) return true; 
 
             // Rotate `s` by moving the first character to the end
             char c = s[0];      // Store the first character of `s`
