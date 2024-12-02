@@ -37,10 +37,9 @@ int main() {
     return 0;
 }'
 
+//2 Reverse a number 
 
-  //2 Reverse a number 
-
-  #include <iostream>
+#include <iostream>
 #include <cmath> // for abs function
 
 int countDigits(int num) {
