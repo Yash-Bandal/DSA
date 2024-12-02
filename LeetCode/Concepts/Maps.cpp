@@ -1,3 +1,44 @@
+//Access count ...count=mpp[key]
+//increse count   { mpp[key]++ }
+
+//basic
+#include <iostream>
+#include <vector>
+#include <map>
+using namespace std;
+
+int main() {
+    // Initialize a vector with some numbers
+    vector<int> vec = {1, 1, 1, 1, 2, 2, 2, 3, 4, 5, 6, 1, 2, 3, 8, 8};
+
+    // Create an empty map to store counts
+    map<int, int> countMap;
+
+    // Iterate through the vector and count occurrences
+    for (int num : vec) {
+        countMap[num]++;  // Increment the count for each number
+    }
+
+    // Print the map to check the result
+    cout << "Number counts:" << endl;
+    for (const auto& pair : countMap) {
+        cout << pair.first << " : " << pair.second << endl;
+    }
+
+    return 0;
+}
+/*
+Number counts:
+1 : 5
+2 : 4
+3 : 2
+4 : 1
+5 : 1
+6 : 1
+8 : 2
+
+*/
+----------------------------------------------------------------------
 #include <iostream>
 #include <map>
 using namespace std;
