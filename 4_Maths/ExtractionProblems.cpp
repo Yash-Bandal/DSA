@@ -37,8 +37,11 @@ int main() {
     return 0;
 }'
 
+//---------------------------------------------
+//2 .Rev Num
 #include <iostream>
 #include <cmath> // for abs function
+using namespace std;
 
 int reverseNumber(int num) {
     int reversed = 0;
