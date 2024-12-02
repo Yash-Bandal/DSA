@@ -37,38 +37,34 @@ int main() {
     return 0;
 }'
 
-//2 Reverse a number 
-
 #include <iostream>
 #include <cmath> // for abs function
 
-int countDigits(int num) {
-    // Handle the edge case where num is 0
-    if (num == 0) {
-        return 1;
-    }
+int reverseNumber(int num) {
+    int reversed = 0;
+    bool isNegative = num < 0;  /
 
-    // Convert to a positive value if it's negative
     num = abs(num);
 
-    int count = 0;
     while (num > 0) {
-        num /= 10;
-        count++;
+        int digit = num % 10;      // Extract 
+        reversed = reversed * 10 + digit;  
+        num /= 10;  /
     }
 
-    return count;
+    // If the number was negative, add the negative sign back
+    return isNegative ? -reversed : reversed;
 }
 
 int main() {
     int num = 12345;
-    std::cout << "Number of digits in " << num << " is " << countDigits(num) << std::endl;
+    std::cout << "Reversed number of " << num << " is " << reverseNumber(num) << std::endl;
 
     num = -9876;
-    std::cout << "Number of digits in " << num << " is " << countDigits(num) << std::endl;
+    std::cout << "Reversed number of " << num << " is " << reverseNumber(num) << std::endl;
 
     num = 0;
-    std::cout << "Number of digits in " << num << " is " << countDigits(num) << std::endl;
+    std::cout << "Reversed number of " << num << " is " << reverseNumber(num) << std::endl;
 
     return 0;
 }
