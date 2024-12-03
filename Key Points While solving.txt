@@ -7,4 +7,6 @@ when 2<=5 ..5++ k=6
      4<=7 ..7++ k=8
      7 <=8.......k=9..like this observe pattern in easy and med questions.all
 
-
+--------------
+-Sometimes dont use 2 loops to compare 2 arrays vectors
+maintain a indexVar and increment as per need..and use that indexVar to access array2 element arr2[indVar]
