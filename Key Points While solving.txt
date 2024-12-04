@@ -10,3 +10,16 @@ when 2<=5 ..5++ k=6
 --------------
 -Sometimes dont use 2 loops to compare 2 arrays vectors
 maintain a indexVar and increment as per need..and use that indexVar to access array2 element arr2[indVar] 
+
+
+----------------
+in some questions you just need to check back and front s[i+1] i-1...
+you may need to iterate overrequired indec only ..like even....eg2914
+
+        for (int i = 0; i < s.length(); i += 2) { //chk pairs...
+            // If characters in current pair don't match,
+            // we need one change to make them equal
+            if (s[i] != s[i + 1]) {
+                minChangesRequired++;
+            }
+        }
