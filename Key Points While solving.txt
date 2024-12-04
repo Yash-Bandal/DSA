@@ -9,4 +9,4 @@ when 2<=5 ..5++ k=6
 
 --------------
 -Sometimes dont use 2 loops to compare 2 arrays vectors
-maintain a indexVar and increment as per need..and use that indexVar to access array2 element arr2[indVar]
+maintain a indexVar and increment as per need..and use that indexVar to access array2 element arr2[indVar] 
