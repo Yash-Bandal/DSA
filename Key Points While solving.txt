@@ -37,3 +37,12 @@ public:
         return "";
     }
 };
+==========================
+Compare 2 map counts or valuse with same keys
+        for (auto& entry : mppS) {
+            if (mppT[entry.first] !=entry.second) { // that is chk cnt of entry in mppT != mppS count
+                // it may seem .first .second..but both point to counts ..
+                // mppT[entry.first] =mppT count value
+                return false;
+            }
+        }
