@@ -15,7 +15,7 @@ public:
                 mppT[t[i]] = i; //{a : 0 , d :1}
             }
             if (mppS[s[i]] != mppT[t[i]]) { //{1 != 1 ..?} ..or 0!=0..?
-                return false;
+                return false;  //dont return true here and down false..wrong op
             }
         }
         return true;
