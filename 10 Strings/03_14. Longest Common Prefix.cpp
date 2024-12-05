@@ -4,7 +4,7 @@ public:
         if (strs.empty())
         {
             return "";
-        }
+        } 
         string prefix = strs[0];
         for (string s : strs)
         {    
