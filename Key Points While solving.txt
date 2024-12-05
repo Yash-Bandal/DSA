@@ -23,3 +23,17 @@ you may need to iterate overrequired indec only ..like even....eg2914
                 minChangesRequired++;
             }
         }
+==================
+If want to operate on string /number that needs to be operatied from back / need to remove characters /int from back
+use for(back loop i--)  eg 1903 leeet
+class Solution {
+public:
+    string largestOddNumber(string snum) {
+        for (int i = snum.length() - 1; i >= 0; i--) {
+            if ((snum[i]-'0') % 2 == 1) {
+                return snum.substr(0, i + 1);
+            }
+        }
+        return "";
+    }
+};
