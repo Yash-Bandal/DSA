@@ -46,3 +46,10 @@ Compare 2 map counts or valuse with same keys
                 return false;
             }
         }
+
+================================
+To check element presence use set
+first store the vector elementes to set and use find to check presence
+unordered_sett<int> uset(vec.begin(),vec.end());
+
+uset.find(i / elem)
