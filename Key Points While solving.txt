@@ -55,3 +55,6 @@ unordered_sett<int> uset(vec.begin(),vec.end());
 uset.find(i / elem)
 
 =============================
+When more than one numbers in test cases..or when 2 arrays given for operation..try using SETS
+========================
+when want to perform ranking..positions ..shifting..where index is required to finf..find index using i ,n , % nums[i]..these four..find relation and then apply
