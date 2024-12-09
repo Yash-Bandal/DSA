@@ -36,14 +36,37 @@ Node *convertArrToLL(vector<int> &arr)
     return head;
 }
 
-int main()
-{
+
+int main() {
     vector<int> arr = {12, 5, 6, 4};
-    Node *head = convertArrToLL(arr);
+
+    /*
+       Call the conversion function to get the linked list head.
+       The linked list will look like this:
+       12 -> 5 -> 6 -> 4 -> NULL
+    */
+    Node* head = convertArrToLL(arr);
+
+    /*
+       Print the data of the head node.
+       Output will be: 12
+    */
     cout << head->data << endl;
 
     return 0;
 }
+
+/*
+   Visualization:
+
+   Input Array: {12, 5, 6, 4}
+   Linked List Construction:
+   Step 1: Create head -> Node(12)
+   Step 2: Add Node(5), link to head -> 12 -> 5
+   Step 3: Add Node(6), link to previous -> 12 -> 5 -> 6
+   Step 4: Add Node(4), link to previous -> 12 -> 5 -> 6 -> 4
+   Final Linked List: 12 -> 5 -> 6 -> 4 -> NULL
+*/
 
 /*
 12
