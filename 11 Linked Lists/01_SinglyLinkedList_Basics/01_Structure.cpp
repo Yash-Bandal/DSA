@@ -13,6 +13,11 @@ public:
         data = data1;
         next = next1;
     }
+       // Constructor
+    Node(int data1) {
+        data = data1;
+        next = nullptr;
+    }
 };
 
 int main() {
