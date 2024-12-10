@@ -1,3 +1,17 @@
+/*
+Concepts :
+Note we declare Node* head and Node*next..they are pointers..
+
+x->y is dereferencing process..
+head->next = temp...means a pointer pointing to next Node
+head-> data = integer value
+
+thus x->y can be a ptr value or a data value depending on y value..
+x is ptr  if y data x->y integer if y ptr (next) x->y also ptr
+*/
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
