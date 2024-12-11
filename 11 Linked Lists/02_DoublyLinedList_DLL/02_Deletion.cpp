@@ -215,3 +215,34 @@ int main()
     cout << endl;
     return 0;
 }
+
+
+/*
+1 2 3 4 5 6 7 8 9 
+=================== HEAD DELETION ====================
+Head Deletion
+
+Before Delete Head :
+1 2 3 4 5 6 7 8 9 
+After Delete Head : 
+2 3 4 5 6 7 8 9 
+=================== TAIL DELETION ====================
+Tail Deletion
+
+Before Delete Tail :
+2 3 4 5 6 7 8 9 
+After Delete Tail : 
+2 3 4 5 6 7 8 =================== K DELETION ====================
+K Deletion
+
+Before 4rd position Deletion :
+2 3 4 5 6 7 8 
+ After 4rd position Deletion :
+2 3 4 6 7 8 =================== NODE DELETION ====================
+Node Deletion
+
+Before Node  Deletion :
+2 3 4 6 7 8 
+ After  Node Deletion :
+2 4 6 7 8 
+*/
