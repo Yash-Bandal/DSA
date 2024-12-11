@@ -148,7 +148,7 @@ Node*InsertEle_Before_Val(Node* head ,int ele, int val){
           //2. connect
           x->next=temp->next;
           //3. reconnect temp
-          temp->next=x; 
+          temp->next=x;    //imagine temp->next like prev...of temp->next->next 
           break;
             
         }
