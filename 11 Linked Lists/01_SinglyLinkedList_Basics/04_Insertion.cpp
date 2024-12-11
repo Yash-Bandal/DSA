@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Node structure
+// Node structure 
 class Node
 {
 public:
