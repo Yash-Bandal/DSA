@@ -162,10 +162,30 @@ Node *deleteEle(Node *head, int ele)
     }
     return head;
 }
+void deleteNodeDirect( Node* ele)  //dont use head ..so no traverse..
+{  
+    // Condition no edge cases
+    // we cant directly delete the noed as we dont have access to prev and traversal
+    //thus copy the next node data o the current node to be deleted and delete the nextNode
+    Node* nextNode = ele->next;  //1. store next node in temporary node
+    ele->data=nextNode->data;    //2. copy next node data 
+    ele->next=nextNode->next;    //3. point elem->next->next;
+    delete nextNode;
+
+    /*
+    1-> 2-> 3->4->5  ele=2
+    1. store newNode = 3
+    2. copy 3 to 2 ..ie ele  1-> 3 -> 3 ->4 ->5  
+    3.point next              1-> 3-->4->5  ele=2
+    delete space allocatedd for the nextNode
+    */
+
+}
+
 
 int main()
 {
-    vector<int> arr = {1, 2, 3, 4, 5, 6};
+    vector<int> arr = {1, 2, 3, 4, 5, 6,7,8,9,10};
     Node *head = makeLL(arr);
 
     cout << "=================== HEAD DELETION ====================" << endl;
@@ -205,10 +225,10 @@ int main()
     }
     else
     {
-        cout << "\nBefore " << k << " Deletion :" << endl;
+        cout << "\nBefore " << k << "rd position Deletion :" << endl;
         printLL(head);
         head = deleteK(head, k);
-        cout << "\n After " << k << " Deletion :" << endl;
+        cout << "\n After " << k << "rd position Deletion :" << endl;
         printLL(head);
     }
 
@@ -217,6 +237,7 @@ int main()
 
     cout << "=================== ELEMENT DELETION ====================" << endl;
     cout << "Element Deletion" << endl;
+    
     int ele = 9;
     if (checkEle(head, ele) == 0)
     {
@@ -232,6 +253,19 @@ int main()
     }
 
     cout << endl;
+    cout << "=================== DIRECT NODE DELETION ====================" << endl;
+    cout << "Direct Deletion" << endl;
+
+    cout << "\nBefore Delete Node directly :" << endl;
+    printLL(head);
+
+    Node* nodeToDel= head->next->next;
+    deleteNodeDirect(nodeToDel);
+
+    cout << "\nAfter Delete Node Directly : " << endl;
+    printLL(head);
+
+    cout << endl;
 
     return 0;
 }
@@ -242,26 +276,36 @@ Output :
 Head Deletion
 
 Before Delete Head :
-1 2 3 4 5 6 
+1 2 3 4 5 6 7 8 9 10 
 After Delete Head : 
-2 3 4 5 6 
+2 3 4 5 6 7 8 9 10 
 =================== TAIL DELETION ====================
 Tail Deletion
 
 Before Delete Tail :
-2 3 4 5 6 
+2 3 4 5 6 7 8 9 10 
 After Delete Tail : 
-2 3 4 5 
+2 3 4 5 6 7 8 9 
 =================== K DELETION ====================
 K Deletion
 
-Before 3 Deletion :
-2 3 4 5 
- After 3 Deletion :
-2 3 5 
+Before 3rd position Deletion :
+2 3 4 5 6 7 8 9 
+ After 3rd position Deletion :
+2 3 5 6 7 8 9 
 =================== ELEMENT DELETION ====================
 Element Deletion
-element Absent......
 
+Before 9 Deletion :
+2 3 5 6 7 8 9 
+ After 9 Deletion :
+2 3 5 6 7 8 
+=================== DIRECT NODE DELETION ====================
+Direct Deletion
+
+Before Delete Node directly :
+2 3 5 6 7 8 
+After Delete Node Directly : 
+2 3 6 7 8 
 
 */
