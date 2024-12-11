@@ -231,19 +231,22 @@ Head insert
 Before Head Insert :
 1 2 3 4 5 6 
 After Head insert : 
--1 0 1 2 3 4 5 6 =================== TAIL INSERTION ====================
+-1 0 1 2 3 4 5 6
+=================== TAIL INSERTION ====================
  insert
 
 Before Tail Insert :
 -1 0 1 2 3 4 5 6 
 After Tail insert : 
--1 0 1 2 3 4 5 6 7 =================== K INSERTION ====================
+-1 0 1 2 3 4 5 6 7 
+=================== K INSERTION ====================
  insert
 
 Before kth Insert :
 -1 0 1 2 3 4 5 6 7 
 After kth insert : 
--1 0 1 2 10 3 4 5 6 7 =================== INSERTION BEFORE VALUE ====================
+-1 0 1 2 10 3 4 5 6 7
+=================== INSERTION BEFORE VALUE ====================
  insert
 
 Before Val Insert :
