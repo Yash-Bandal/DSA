@@ -109,7 +109,7 @@ Node*InsertK(Node* head , int val,int k){
      Node*temp = head;
      while(temp != NULL){
         cnt++;
-        if(cnt == k-1){ //reach prev postion 
+        if(cnt == k-1){ //reach prev postion ..ie temp stops at k-1
           //1. create
           Node* x = new Node(val);
           //2. connect
