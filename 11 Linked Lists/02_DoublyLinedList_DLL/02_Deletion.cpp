@@ -88,7 +88,7 @@ Node *deleteTail(Node *head)
     newTail->next = nullptr;
     tail->back = nullptr;
 
-    delete (tail);
+     free(tail);
     return head;
 }
 
