@@ -50,6 +50,8 @@ void print(Node* head) {
  
 // Funcion to reverse a doubly linked list
 // Stack Brute Force Approach
+
+//Brute 2 pass O(2N)
 Node* reverseDLL(Node* head){
     // if head is empty or there is only one element
     // we can directly just return the head
@@ -75,6 +77,26 @@ Node* reverseDLL(Node* head){
     
     return head;
 
+}
+
+//Optimized 1 pass swapping
+Node* reverseDLL(Node* head)
+{    
+   
+   if(head==NULL || head->next == NULL){
+        return head;
+    }
+    Node* curr = head;
+    Node* last = NULL;
+    while (curr != NULL) 
+    {
+       last = curr->prev;
+       curr->prev = curr->next;
+       curr->next = last;
+
+       curr= curr->prev; //Not back as we have chaned the ptrs
+    }
+    return last->prev;
 }
 
 
