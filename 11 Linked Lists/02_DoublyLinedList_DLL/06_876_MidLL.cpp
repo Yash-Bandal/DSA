@@ -36,9 +36,9 @@ public:
             return head;
         }
         int LLsize = findLength(head);
-        int mid = LLsize / 2 ;
+        int mid = (LLsize / 2) +1;
         ListNode* midN = head;
-        while (mid != 0) {
+        while (mid != 1) {
             mid--;
             midN = midN->next;
         }
