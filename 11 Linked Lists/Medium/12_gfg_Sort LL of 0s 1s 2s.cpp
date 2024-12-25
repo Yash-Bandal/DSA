@@ -95,21 +95,16 @@ In the optimal solution, after segregating the nodes into three separate sublist
 
 2. **Connecting the Sublists:**
    - If the `1s` list is not empty:
-     ```cpp
      zero->next = oneHead->next;
-     ```
    - Otherwise, connect the `0s` list directly to the `2s` list:
-     ```cpp
      zero->next = twoHead->next;
-     ```
    - The `1s` list is always connected to the `2s` list:
-     ```cpp
      one->next = twoHead->next;
-     ```
+   
    - Terminate the final list explicitly:
-     ```cpp
+
      two->next = nullptr;
-     ```
+  
 
 3. **Returning the Sorted List:**
    - The new head of the sorted list is:
@@ -165,3 +160,61 @@ In the optimal solution, after segregating the nodes into three separate sublist
      - Result: `0 -> 0 -> 1 -> 1`.
 
 */
+
+// Visualization of Edge Cases
+
+// 1. No 0s (Input: 1 -> 2 -> 1 -> 2)
+//    - 0s: Empty (zeroHead->next = nullptr)
+//    - 1s: 1 -> 1
+//    - 2s: 2 -> 2
+//    - Merging:
+//      - zero->next = oneHead->next.
+//      - one->next = twoHead->next.
+//      - Result: 1 -> 1 -> 2 -> 2.
+
+// 2. No 1s (Input: 0 -> 0 -> 2 -> 2)
+//    - 0s: 0 -> 0
+//    - 1s: Empty (oneHead->next = nullptr)
+//    - 2s: 2 -> 2
+//    - Merging:
+//      - zero->next = twoHead->next.
+//      - one->next = nullptr (since no 1s).
+//      - Result: 0 -> 0 -> 2 -> 2.
+
+// 3. No 2s (Input: 0 -> 1 -> 0 -> 1)
+//    - 0s: 0 -> 0
+//    - 1s: 1 -> 1
+//    - 2s: Empty (twoHead->next = nullptr)
+//    - Merging:
+//      - zero->next = oneHead->next.
+//      - one->next = nullptr (since no 2s).
+//      - Result: 0 -> 0 -> 1 -> 1.
+
+// 4. All values are the same (Input: 1 -> 1 -> 1)
+//    - 0s: Empty (zeroHead->next = nullptr)
+//    - 1s: 1 -> 1 -> 1
+//    - 2s: Empty (twoHead->next = nullptr)
+//    - Merging:
+//      - zero->next = oneHead->next.
+//      - one->next = nullptr (since no 2s).
+//      - Result: 1 -> 1 -> 1.
+
+// 5. All values are distinct (Input: 0 -> 2 -> 1)
+//    - 0s: 0
+//    - 1s: 1
+//    - 2s: 2
+//    - Merging:
+//      - zero->next = oneHead->next.
+//      - one->next = twoHead->next.
+//      - Result: 0 -> 1 -> 2.
+
+// 6. Empty list (Input: Empty)
+//    - 0s: Empty (zeroHead->next = nullptr)
+//    - 1s: Empty (oneHead->next = nullptr)
+//    - 2s: Empty (twoHead->next = nullptr)
+//    - Merging:
+//      - zero->next = nullptr (since no 0s).
+//      - one->next = nullptr (since no 1s).
+//      - two->next = nullptr (since no 2s).
+//      - Result: Empty list.
+
