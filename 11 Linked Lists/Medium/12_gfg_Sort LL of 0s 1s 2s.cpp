@@ -83,6 +83,18 @@ class Solution {
     }
 };
 
+=====================================================================
+
+        // Merging the sublists
+        if (oneHead->next != nullptr) {
+            zero->next = oneHead->next;  //initially   zero->next will be nptr if no zeros
+        } else {
+            zero->next = twoHead->next;
+        }
+        one->next = twoHead->next;    //initially   one->next will be nptr if no ones
+        two->next = nullptr;          //initially   two->next will be nptr if no twos
+-======================================================================
+        
 /*
 ### Explanation of the Merging Process in the Optimal Solution
 
