@@ -2,3 +2,10 @@ You forget moving the pointer ahead in while loop
 while(temp ! = NULL){
 temp = temp->next;  //this
 }
+
+
+if you think logic correct and error in code something..check
+
+temp = temp - data  ..no  " -> "..it may be " - "
+temp = temp -> data
+         -------
