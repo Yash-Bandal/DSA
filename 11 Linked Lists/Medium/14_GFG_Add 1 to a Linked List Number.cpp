@@ -1,3 +1,4 @@
+//TC = O(#N) SC O(!)
 class Solution {
 private:
     Node* reverse(Node* head) {
@@ -39,6 +40,45 @@ public:
         }
         // else normal..if last nodeSum inside remains <=9
          head = reverse(head);
+        return head;
+    }
+};
+
+
+//Optimied - Backtrack
+class Solution {
+private:
+    int getCarryAddedLL(Node* temp) {
+        if (temp == NULL) {
+            return 1; // Base case: Add 1 when reaching the end of the list
+        }
+
+        // Recursive call to process the next node
+        int carry = getCarryAddedLL(temp->next);
+
+        // Add carry to the current node's data
+        int NodeSum = temp->data + carry;
+        if(NodeSum <=9){
+            temp->data=NodeSum;
+            return 0;
+        }
+        temp->data=0;
+        return 1;
+    }
+
+public:
+    Node* addOne(Node* head) {
+        // Get the carry after adding 1
+        int carry = getCarryAddedLL(head);
+
+        // If there's a carry left, create a new node at the front
+        if (carry == 1) {
+            Node* newNode = new Node(1);
+            newNode->next = head;
+            return newNode;
+        }
+
+        // Otherwise, return the updated head
         return head;
     }
 };
