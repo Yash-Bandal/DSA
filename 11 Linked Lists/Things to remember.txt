@@ -1,0 +1,4 @@
+You forget moving the pointer ahead in while loop
+while(temp ! = NULL){
+temp = temp->next;  //this
+}
