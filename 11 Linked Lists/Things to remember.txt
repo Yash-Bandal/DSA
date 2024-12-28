@@ -9,3 +9,10 @@ if you think logic correct and error in code something..check
 temp = temp - data  ..no  " -> "..it may be " - "
 temp = temp -> data
          -------
+----------------------------
+Dont forget to handle single value and edge cases
+
+
+if sometimes..especially DLLs..handle single value OR nullptr cases
+(ie nptr->prev or->next never possible)
+do if(presentNode) {Node operation moving}
