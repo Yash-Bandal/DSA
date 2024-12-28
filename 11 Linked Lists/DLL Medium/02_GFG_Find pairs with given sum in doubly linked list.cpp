@@ -1,3 +1,30 @@
+//Brute -TLE
+//TLE O(N^2)..not exactly but n^2..almost
+class Solution
+{
+public:
+    vector<pair<int, int>> findPairsWithGivenSum(Node *head, int target)
+    {
+        vector<pair<int, int>> res;
+        Node* temp1 = head;
+
+        while (temp1 != NULL) {
+            Node* temp2 = temp1->next;
+            while (temp2 != NULL) {
+                if (temp1->data + temp2->data == target) {
+                    res.push_back({temp1->data, temp2->data});
+                }
+                temp2 = temp2->next; // Move temp2 to the next node
+            }
+            temp1 = temp1->next; // Move temp1 to the next node
+        }
+        return res;
+    }
+};
+
+//===============================================================================================
+
+//Optimized
 class Solution {
 private:
     Node* getTail(Node* head) {
