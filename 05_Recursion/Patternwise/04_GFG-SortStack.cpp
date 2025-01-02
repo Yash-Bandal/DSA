@@ -1,3 +1,6 @@
+/*Almost all same logic for recursion...especially stack..*/
+
+
 //Brute
 void SortedStack ::sort() {
     vector<int> arr;
@@ -27,7 +30,7 @@ void insertSorted(stack<int>&s,int element) { //note we cant use s stack directl
     s.pop();
 
     // Recursively insert the element
-    insertSorted(s,element);
+    insertSorted(s,element);  //dont push top by mistake
 
     // After insertion, push the popped element back onto the stack
     s.push(top);
