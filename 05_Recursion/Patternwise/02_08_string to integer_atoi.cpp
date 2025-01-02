@@ -1,6 +1,6 @@
-//brute
+//brute force
 class Solution {
-public:
+public: 
     int myAtoi(string s) {
         bool flag = false; // mark flag true when number is digit
         long long ans = 0;
