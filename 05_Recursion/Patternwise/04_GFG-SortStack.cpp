@@ -14,6 +14,7 @@ void SortedStack ::sort() {
 
 
 //recursion
+//use reference ..else error
 void insertSorted(stack<int>&s,int element) { //note we cant use s stack directly ..as no '::'' used..thus pass from below
     // Base case: If stack is empty or element is greater than or equal to the top of the stack, push it
     if (s.empty() || s.top() <= element) {
