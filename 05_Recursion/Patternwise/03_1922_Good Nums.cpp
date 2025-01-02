@@ -1,3 +1,5 @@
+//See Notes
+
 class Solution {
 public:
     // 5 = 0,2,4,6,8..single digit even nums..that fit at even indice
