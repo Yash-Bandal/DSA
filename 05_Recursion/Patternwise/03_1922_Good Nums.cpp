@@ -6,7 +6,7 @@ public:
     long long myPow(long long x, long long n) {
         if (n == 0) {
             return 1;
-        }
+        } 
         if (n == 1) {
             return x; // not  return 'n' ..silly mistake
         }
