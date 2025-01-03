@@ -1,3 +1,4 @@
+- Pass by reference almost all..sometimes u may face err if negelct this
 -Always first identify the pattern.. what datatype or algorithm i need to use to get the output
 -Anayze the output and input test case relation..see + - * /..anything
 eg -Leet 1539. Kth Missing Positive Number..here Input: arr = [2,3,4,7,11], k = 5 Output: 9..see..without getting required needed algo  too..you see that 
@@ -64,3 +65,8 @@ For some questions like 1422 2270..Logic is same..that is ..dont calculate full 
 calculate totalsum in O(N) for loop..i=0 to size()
 then in 1 loop O(N) ..cacluate leftsum till from i=0 to size()-1..not end size()..as we dont calc for lastest..its auto calc
 then rightsum = totalsum - leftsum
+
+
+==========================
+when you may think you are correct and require no changes...and 
+sign of no output..that is empty output...see if u have passed through reference "&"
