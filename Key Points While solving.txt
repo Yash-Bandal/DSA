@@ -58,3 +58,9 @@ uset.find(i / elem)
 When more than one numbers in test cases..or when 2 arrays given for operation..try using SETS
 ========================
 when want to perform ranking..positions ..shifting..where index is required to finf..find index using i ,n , % nums[i]..these four..find relation and then apply
+
+========================
+For some questions like 1422 2270..Logic is same..that is ..dont calculate full sum of array...where left and rightsum requried
+calculate totalsum in O(N) for loop..i=0 to size()
+then in 1 loop O(N) ..cacluate leftsum till from i=0 to size()-1..not end size()..as we dont calc for lastest..its auto calc
+then rightsum = totalsum - leftsum
