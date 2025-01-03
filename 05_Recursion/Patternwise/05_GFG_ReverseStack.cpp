@@ -4,7 +4,7 @@ class Solution {
 private:
     void insertEle(stack<int>& st, int ele) {
         if (st.empty()) {
-            st.push(ele);
+            st.push(ele); 
             return;
         }
         int top = st.top();
