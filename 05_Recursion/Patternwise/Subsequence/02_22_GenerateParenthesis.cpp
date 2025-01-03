@@ -59,7 +59,7 @@ generate("", 3, 0)   // Start with empty string
 │   └── Backtrack
 └── Backtrack
 
-*?
+*/
 
 #include <iostream>
 #include <vector>
