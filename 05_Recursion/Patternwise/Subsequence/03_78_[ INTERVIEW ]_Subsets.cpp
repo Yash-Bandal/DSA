@@ -143,3 +143,109 @@ Dry Run for input nums = [1, 2, 3]:
 18. End of recursion: Return final res = [[1, 2, 3], [1, 2], [1, 3], [1], [2, 3], [2], [3], []]
 
 */
+
+
+//
+class Solution {
+public:
+    vector<vector<int>> subsets(vector<int>& nums) {
+        int n = nums.size();
+        vector<vector<int>> res;
+        for (int num = 0; num < pow(2, n); num++) {
+            vector<int> one;
+            for (int i = 0; i < n; i++) {
+                // if index marked 1 in table..include that index element
+                if ((num & (1 << i)) != 0) {
+                    one.push_back(nums[i]);
+                }
+            }
+            res.push_back(one);
+        }
+        return res;
+    }
+};
+
+/*
+silly 
+ if ((nums[i] & (1 << i)) == 1)..dont check for 1 and dont check for nums[i]
+
+ check for num..columns...0 -> 7
+ use != 0 
+*/
+
+/*
+Example Dry Run with Input: nums = {1, 2, 3}
+Initial setup:
+
+nums = {1, 2, 3}
+n = 3 (size of nums)
+res = [] (result list)
+Loop through all possible subsets (from 0 to 2^3 - 1 = 7):
+
+For num = 0 (binary 000):
+    one = [] (empty subset)
+    Check bit 0: num & (1 << 0) = 0 & 1 = 0 → no element added.
+    Check bit 1: num & (1 << 1) = 0 & 2 = 0 → no element added.
+    Check bit 2: num & (1 << 2) = 0 & 4 = 0 → no element added.
+    Current subset: []
+    Add [] to res: res = [[]]
+
+For num = 1 (binary 001):
+    one = [] (empty subset)
+    Check bit 0: num & (1 << 0) = 1 & 1 = 1 → include 1.
+    Check bit 1: num & (1 << 1) = 1 & 2 = 0 → no element added.
+    Check bit 2: num & (1 << 2) = 1 & 4 = 0 → no element added.
+    Current subset: [1]
+    Add [1] to res: res = [[], [1]]
+
+For num = 2 (binary 010):
+    one = [] (empty subset)
+    Check bit 0: num & (1 << 0) = 2 & 1 = 0 → no element added.
+    Check bit 1: num & (1 << 1) = 2 & 2 = 2 → include 2.
+    Check bit 2: num & (1 << 2) = 2 & 4 = 0 → no element added.
+    Current subset: [2]
+    Add [2] to res: res = [[], [1], [2]]
+
+For num = 3 (binary 011):
+    one = [] (empty subset)
+    Check bit 0: num & (1 << 0) = 3 & 1 = 1 → include 1.
+    Check bit 1: num & (1 << 1) = 3 & 2 = 2 → include 2.
+    Check bit 2: num & (1 << 2) = 3 & 4 = 0 → no element added.
+    Current subset: [1, 2]
+    Add [1, 2] to res: res = [[], [1], [2], [1, 2]]
+
+For num = 4 (binary 100):
+    one = [] (empty subset)
+    Check bit 0: num & (1 << 0) = 4 & 1 = 0 → no element added.
+    Check bit 1: num & (1 << 1) = 4 & 2 = 0 → no element added.
+    Check bit 2: num & (1 << 2) = 4 & 4 = 4 → include 3.
+    Current subset: [3]
+    Add [3] to res: res = [[], [1], [2], [1, 2], [3]]
+
+For num = 5 (binary 101):
+    one = [] (empty subset)
+    Check bit 0: num & (1 << 0) = 5 & 1 = 1 → include 1.
+    Check bit 1: num & (1 << 1) = 5 & 2 = 0 → no element added.
+    Check bit 2: num & (1 << 2) = 5 & 4 = 4 → include 3.
+    Current subset: [1, 3]
+    Add [1, 3] to res: res = [[], [1], [2], [1, 2], [3], [1, 3]]
+
+For num = 6 (binary 110):
+    one = [] (empty subset)
+    Check bit 0: num & (1 << 0) = 6 & 1 = 0 → no element added.
+    Check bit 1: num & (1 << 1) = 6 & 2 = 2 → include 2.
+    Check bit 2: num & (1 << 2) = 6 & 4 = 4 → include 3.
+    Current subset: [2, 3]
+    Add [2, 3] to res: res = [[], [1], [2], [1, 2], [3], [1, 3], [2, 3]]
+
+For num = 7 (binary 111):
+    one = [] (empty subset)
+    Check bit 0: num & (1 << 0) = 7 & 1 = 1 → include 1.
+    Check bit 1: num & (1 << 1) = 7 & 2 = 2 → include 2.
+    Check bit 2: num & (1 << 2) = 7 & 4 = 4 → include 3.
+    Current subset: [1, 2, 3]
+    Add [1, 2, 3] to res: res = [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
+
+After completing the loop, the final result list `res` contains all subsets of `{1, 2, 3}`:
+[[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
+*/
