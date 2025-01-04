@@ -145,7 +145,7 @@ Dry Run for input nums = [1, 2, 3]:
 */
 
 
-//TC O(2*n  * n )
+//TC O(2*n  * n )   BOOK DSA 2
 //Power set Bit Manip
 class Solution {
 public:
