@@ -145,7 +145,8 @@ Dry Run for input nums = [1, 2, 3]:
 */
 
 
-//
+//TC O(2*n  * n )
+//Power set Bit Manip
 class Solution {
 public:
     vector<vector<int>> subsets(vector<int>& nums) {
