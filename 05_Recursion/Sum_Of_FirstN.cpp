@@ -11,7 +11,7 @@ using namespace std;
     solve(6);
   }
    
-
+ 
 //============================================================================
 //Nishant Chahar
 #include<iostream>
