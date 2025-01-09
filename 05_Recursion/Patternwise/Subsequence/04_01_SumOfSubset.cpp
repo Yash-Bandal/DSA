@@ -40,3 +40,50 @@ output :
 2 
 
 */
+
+//======================================
+//Print only one seq
+
+//1 Not recommended GLOBAL VAR bool..as it gives seg fault
+#include <bits/stdc++.h>
+#include <iostream>
+using namespace std;
+bool flag = false;
+void print(vector<int>& dS) {
+    for (auto it : dS) {
+        cout << it << " ";
+    }
+    cout << endl;
+}
+void printS(int i, vector<int>& dS, int s, vector<int>& arr, int target) {
+    if (i == arr.size() && flag == false) {
+        if (s == target) {
+            flag = true;
+            print(dS);
+        }
+        return;
+    }
+    // Include
+    dS.push_back(arr[i]); //0 1 2 2..all indices tree 
+    s += arr[i];
+    printS(i + 1, dS, s, arr, target);
+
+    // exclude
+    dS.pop_back();
+    s -= arr[i];
+    printS(i + 1, dS, s, arr, target);
+}
+int main() {
+    vector<int> arr = {1, 2, 1};
+    int target = 2;
+    vector<int> ds;
+    printS(0, ds, 0, arr, target);
+
+    return 0;
+}
+/*
+OP:
+1 1 
+Segmentation fault
+
+*/
