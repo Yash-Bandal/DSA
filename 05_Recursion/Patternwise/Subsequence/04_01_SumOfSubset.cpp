@@ -81,6 +81,25 @@ int main() {
 
     return 0;
 }
+
+//OR
+
+int cnt = 0;
+void print(vector<int>& dS) {
+    for (auto it : dS) {
+        cout << it << " ";
+    }
+    cout << endl;
+}
+void printS(int i, vector<int>& dS, int s, vector<int>& arr, int target) {
+    if (i == arr.size() && cnt ==0) {
+        if (s == target) {
+          cnt = 1;
+            print(dS);
+
+        }
+        return;
+    }
 /*
 OP:
 1 1 
