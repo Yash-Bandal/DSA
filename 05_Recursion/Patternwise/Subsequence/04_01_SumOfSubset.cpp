@@ -158,3 +158,10 @@ int main() {
 
     return 0;
 }
+/*
+op :
+1 1
+
+
+NO SEG FAULT
+*/
