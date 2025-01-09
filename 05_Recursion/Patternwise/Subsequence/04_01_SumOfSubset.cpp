@@ -106,3 +106,55 @@ OP:
 Segmentation fault
 
 */
+
+
+
+//Correct functional way- bool function type
+//To print single ele..Stop after 1 recursion and avoid future recursion calls
+#include <bits/stdc++.h>
+#include <iostream>
+using namespace std;
+
+void print(vector<int>& dS) {
+    for (auto it : dS) {
+        cout << it << " ";
+    }
+    cout << endl;
+}
+bool printS(int i, vector<int>& dS, int s, vector<int>& arr, int target) {
+    if (i == arr.size()) {
+        //condition satisfied
+        if (s == target) {
+            print(dS);
+            return true;
+        }
+            //not satisfied
+        else{
+        return false;
+        }
+    }
+    // Include
+    dS.push_back(arr[i]); //0 1 2 2..all indices tree 
+    s += arr[i];
+    if(printS(i + 1, dS, s, arr, target) == true){
+        return true;
+    }
+
+    // exclude
+    dS.pop_back();
+    s -= arr[i];
+    if(printS(i + 1, dS, s, arr, target) == true){
+        return true;
+    }
+    
+    return false;
+    
+}
+int main() {
+    vector<int> arr = {1, 2, 1};
+    int target = 2;
+    vector<int> ds;
+    printS(0, ds, 0, arr, target);
+
+    return 0;
+}
