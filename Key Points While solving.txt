@@ -72,3 +72,16 @@ then rightsum = totalsum - leftsum
 ==========================
 when you may think you are correct and require no changes...and 
 sign of no output..that is empty output...see if u have passed through reference "&"
+
+
+=========================
+traverse array left to right
+set l=0;r=n-1
+for(i=left -> right)
+
+same for 2d array
+if r->l
+see row and col indices..if row = even...traverse l->r
+                       ..if row = odd....traverse r->l
+using for loop..
+=========================
