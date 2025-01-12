@@ -7,7 +7,7 @@ public:
         // Check if the matrix is empty
         if (matrix.empty() || matrix[0].empty()) {
             return {};
-        }
+        } 
 
         int left = 0;       // col
         int right = m - 1;  // col
