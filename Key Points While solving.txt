@@ -85,3 +85,7 @@ see row and col indices..if row = even...traverse l->r
                        ..if row = odd....traverse r->l
 using for loop..
 =========================
+digit check single double..
+doublle while(num >= 19){
+      //perform until single dig
+}
