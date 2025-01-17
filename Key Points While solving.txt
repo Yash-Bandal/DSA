@@ -89,3 +89,19 @@ digit check single double..
 doublle while(num >= 19){
       //perform until single dig
 }
+===========================
+
+sometimes think from 2 sides...if == not working use !=
+generally...when value questions..that have input value given and you want to skip them
+.1 First approach in brain is to check element ..then skip it using continue..wrong
+            if (nums[i] == val) {
+                i++;
+                continue;
+            }
+.2 First chk in arr if elem != val..tru..then place elems
+            if (nums[i] != val) 
+            {
+                nums[k] = nums[i]; 
+                 k++;
+            }
+eg leetcode 26..also avoidn changing i in loop
