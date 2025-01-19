@@ -59,7 +59,6 @@ void generateSubseq(int arr[], vector<int> res, int i)
     //we cant do arr.size() this is for vectors  either pass int n in func or size directly
     if (i >= 3)
     {
-
         // print arrays
         for (int i = 0; i < res.size(); i++)
         {
