@@ -105,3 +105,8 @@ generally...when value questions..that have input value given and you want to sk
                  k++;
             }
 eg leetcode 26..also avoidn changing i in loop
+========================================
+
+wherever midpoint required in question..try using two pointers...
+whenever need searching..use .find()...set and map or string::npos find 
+eg :1704 beautifulStringQuestionIsItBoomBaam..
