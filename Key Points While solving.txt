@@ -5,7 +5,7 @@ substring problems are very common ..
 -Anayze the output and input test case relation..see + - * /..anything
 eg -Leet 1539. Kth Missing Positive Number..here Input: arr = [2,3,4,7,11], k = 5 Output: 9..see..without getting required needed algo  too..you see that 
 
-when 2<=5 ..5++ k=6 
+when 2<=5 ..5++ k=6  
      3<=6..6++  k=7   
      4<=7 ..7++ k=8 
      7 <=8.......k=9..like this observe pattern in easy and med questions.all
