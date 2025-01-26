@@ -1,5 +1,5 @@
 substring problems are very common ..
-   
+    
 - Pass by reference almost all..sometimes u may face err if negelct this
 -Always first identify the pattern.. what datatype or algorithm i need to use to get the output
 -Anayze the output and input test case relation..see + - * /..anything
