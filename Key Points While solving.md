@@ -1,24 +1,52 @@
-substring problems are very common .. 
+## Observations
 
-- Pass by reference almost all..sometimes u may face err if negelct this
--Always first identify the pattern.. what datatype or algorithm i need to use to get the output
--Anayze the output and input test case relation..see + - * /..anything
-eg -Leet 1539. Kth Missing Positive Number..here Input: arr = [2,3,4,7,11], k = 5 Output: 9..see..without getting required needed algo  too..you see that 
-
+### Pattern Recognition
+- Analyze the input-output relationship using basic operations (`+`, `-`, `*`, `/`).
+  - Example: **LeetCode 1539** (Kth Missing Positive Number)
+    - Input: `arr = [2,3,4,7,11]`, `k = 5` → Output: `9`
+    - Observe: Increment `k` based on conditions without requiring a full-fledged algorithm...see..without getting required needed algo  too..you see that
+```
 when 2<=5 ..5++ k=6  
      3<=6..6++  k=7   
      4<=7 ..7++ k=8 
      7 <=8.......k=9..like this observe pattern in easy and med questions.all
-
--------------- 
--Sometimes dont use 2 loops to compare 2 arrays vectors
-maintain a indexVar and increment as per need..and use that indexVar to access array2 element arr2[indVar] 
+```
 
 
-----------------
+### Optimizations
+
+- Sometimes dont use nestded 2 loops to compare 2 arrays vectors
+ - maintain a indexVar and increment as per need..and use that indexVar to access array2 element arr2[indVar]
+ ```cpp
+   //2 loop O(M*N)
+   void compareArrays(vector<int> &arr1, vector<int> &arr2) {
+    for (int i = 0; i < arr1.size(); i++) {  // Loop through arr1
+        for (int j = 0; j < arr2.size(); j++) {  // Loop through arr2
+            if (arr1[i] == arr2[j]) {
+                cout << arr1[i] << " ";  // Common element found
+            }
+        }
+    }
+
+   //1 loop O(M+N)
+   void compareArrays(vector<int> &arr1, vector<int> &arr2) {
+    int j = 0;  // Index variable for arr2
+
+    for (int i = 0; i < arr1.size(); i++) {  // Loop through arr1
+        while (j < arr2.size() && arr2[j] < arr1[i]) {
+            j++;  // Move j forward only when arr2[j] is smaller
+        }
+
+        if (j < arr2.size() && arr1[i] == arr2[j]) {
+            cout << arr1[i] << " ";  // Common element found
+        }
+    }
+```
+
+
 in some questions you just need to check back and front s[i+1] i-1...
 you may need to iterate overrequired indec only ..like even....eg2914
-
+```
         for (int i = 0; i < s.length(); i += 2) { //chk pairs...
             // If characters in current pair don't match,
             // we need one change to make them equal
@@ -26,6 +54,7 @@ you may need to iterate overrequired indec only ..like even....eg2914
                 minChangesRequired++;
             }
         }
+```
 ==================
 If want to operate on string /number that needs to be operatied from back / need to remove characters /int from back
 use for(back loop i--)  eg 1903 leeet
@@ -110,3 +139,10 @@ eg leetcode 26..also avoidn changing i in loop
 wherever midpoint required in question..try using two pointers...
 whenever need searching..use .find()...set and map or string::npos find 
 eg :1704 beautifulStringQuestionIsItBoomBaam..
+
+
+## Observations
+- substring problems are very common ..
+- Pass by reference almost all..sometimes u may face err if negelct this
+- Always first identify the pattern.. what datatype or algorithm i need to use to get the output
+
