@@ -147,6 +147,14 @@ doublle while(num >= 9){
 ```
  - eg leetcode 26..also avoidn changing i in loop
 
+### Basics sometimes ignored
+- string-int converstion stoi() & to_string
+- character to integer char[i] - '0' and
+```
+   char c = 'D';
+    int index = c - 'A';  // 'A' is the reference (0 for 'A', 1 for 'B', ...)
+```
+
 ### Edge Cases
 - when you may think you are correct and require no changes...and 
 sign of no output..that is empty output...see if u have passed through reference "&"
