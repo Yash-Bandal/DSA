@@ -159,6 +159,19 @@ doublle while(num >= 9){
 - when you may think you are correct and require no changes...and 
 sign of no output..that is empty output...see if u have passed through reference "&"
 
+
+### CodeChef array 3rd que
+- Note when we want to choose between 2 variables..that include comparison..and < > constraints..use max mins
+- Here u thought first of using if else like things...but we need min max.(wither 0 or discounted price)
+-  and ..when 1 extra var given ..add its value to total var
+```cpp
+    for (int i = 0; i < n; i++) {
+        cin >> a[i];
+        total_without_coupen += a[i];
+        total_with_coupen += max(0, a[i] - y);//+= ..this total_wiith_coup = x
+        //either make it free if < than Y..or add reduced cost
+    }
+```
 <br>
 
 ## Observations
@@ -168,5 +181,4 @@ sign of no output..that is empty output...see if u have passed through reference
 - Use **two-pointer techniques** whenever possible, especially for midpoint-related problems
 - **String and array searching**: Use `.find()` , or `string::npos` ON `set`, `map`.
   -  eg :1704 beautifulStringQuestionIsItBoomBaam..
-
 
