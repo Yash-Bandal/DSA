@@ -91,6 +91,7 @@ unordered_sett<int> uset(vec.begin(),vec.end());
 
 .find(index OR element)
   if (set.find(i) != set.end()) { /* Found */ }
+!= checks if found == checks if not found
 ```
 
 
