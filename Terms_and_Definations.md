@@ -11,3 +11,4 @@
 ## 3. Lexicographical Order
  Lexicographical order is the generalization of the way words are alphabetically ordered in dictionaries. It is a sequence of strings sorted based on their characters, with the first character being the most significant. If two strings share a common prefix, the string with the shorter length is considered smaller. This order is used in many computational algorithms, particularly in string sorting and searching.
  
+ 
