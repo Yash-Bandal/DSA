@@ -7,7 +7,7 @@
 
 ## 2. Combinatorics
  Combinatorics is a branch of mathematics focused on counting, arrangement, and combination of objects. It plays a vital role in various fields like computer science, particularly in algorithm design, cryptography, and network theory. Key concepts in combinatorics include permutations, combinations, and graph theory.
-   
+
 ## 3. Lexicographical Order
  Lexicographical order is the generalization of the way words are alphabetically ordered in dictionaries. It is a sequence of strings sorted based on their characters, with the first character being the most significant. If two strings share a common prefix, the string with the shorter length is considered smaller. This order is used in many computational algorithms, particularly in string sorting and searching.
  
