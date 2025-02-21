@@ -12,7 +12,7 @@ when 2<=5 ..5++ k=6
      7 <=8.......k=9..like this observe pattern in easy and med questions.all
 ```
 
-
+ 
 ### Optimizations
 
 - Sometimes dont use nestded 2 loops to compare 2 arrays vectors
