@@ -1,7 +1,7 @@
 # Data Structures and Algorithms (DSA)
 
 ## 📌 Overview
-This repository contains implementations of essential **Data Structures and Algorithms (DSA)** in multiple programming languages. It is designed to help in competitive programming, coding interviews, and improving problem-solving skills.
+This repository contains implementations of essential **Data Structures and Algorithms (DSA)** in multiple programming languages. It is designed to help in competitive programming, coding interviews, and improving problem-solving skills. 
 
 ## 📂 Topics To Be Covered
 
