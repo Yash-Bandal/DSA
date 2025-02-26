@@ -53,6 +53,11 @@ int main() {
         } 
         
         // Case 3: Exactly 2N ones
+            /*
+            S1 = "110"  → 2 '1's
+            S2 = "101"  → 2 '1's
+            S3 = "011"  → 2 '1's
+            */
         else if (totalOnes == 2 * N) {
             // Find the string with the least '1's
             int minOnes = min(a[0], min(a[1], a[2]));
