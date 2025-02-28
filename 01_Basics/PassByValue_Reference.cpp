@@ -1,5 +1,11 @@
 // Covers all basisc of language first ..loops statements .etc
  
+
+// Value - A copy passed - No change in output..actual value not changed
+//Reference -A reference made to actual value-Changes made to actual value
+//VCNC.   RAC
+
+
 //pass By reference 
 #include <iostream> 
 using namespace std;
