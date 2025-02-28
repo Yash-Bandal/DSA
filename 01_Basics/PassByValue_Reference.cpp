@@ -16,8 +16,8 @@ int main()                                    //cin
     int a=70; //actual..copy sent above
     int b=70;
     addAndPrintSum(a, b);   //output is 100..50+50 not 70+70 as local preference..
-                            //conclusion is that a and b remain 70 even after call
-    cout<<"a="<<a<<" "<<"b="<<b<<endl;    //a=70 and b=70 not a=50 b=50
+                            //conclusion is that a and b change to 50 after call
+    cout<<"a="<<a<<" "<<"b="<<b<<endl;    //a=59 and b=50 not a=70 b=70
     
     return 0;
 }
