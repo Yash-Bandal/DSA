@@ -173,6 +173,17 @@ sign of no output..that is empty output...see if u have passed through reference
         //either make it free if < than Y..or add reduced cost
     }
 ```
+
+### Subarray Traversal of K size
+```cpp
+for(int i=0;i <= n+k ; i++) // use <= for not skipping last
+{
+ for(int j= i ; j < i+k ; j++){
+    //Operation
+    // eg seenSet.insert(nums[j]);
+}
+}
+```
 <br>
 
 ## Observations
