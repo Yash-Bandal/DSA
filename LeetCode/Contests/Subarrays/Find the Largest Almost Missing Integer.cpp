@@ -5,7 +5,7 @@ public:
         int n = nums.size();
         unordered_map<int, int> mpp;
         // subarray of size k traveresed like this
-        for (int i = 0; i <= n - k; i++) { //<=
+        for (int i = 0; i <= n - k; i++) { //<=..silly
             unordered_set<int> seen;
             // mark subarray elems as seen
             for (int j = i; j < i + k; j++) {
