@@ -1,0 +1,11 @@
+# Stack
+- What are the advantages and disadvantages of using an array vs. a linked list to implement a stack?
+- Can a stack be implemented using only one queue? If yes, how?
+- How does recursion use the stack internally? Explain with an example.
+- What are some real-world applications of a stack?
+- What is tail recursion, and how does the compiler optimize it using a stack?
+- How can you implement two stacks in a single array efficiently?
+- How does the stack memory differ from the heap memory in program execution?
+- What is stack overflow? How can it be prevented in recursion?
+- How does a call stack work in function execution?
+- What are some problems where a stack is not the ideal data structure?
