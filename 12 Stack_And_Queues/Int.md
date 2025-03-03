@@ -65,7 +65,7 @@ A **stack** is a linear data structure that follows the **Last In, First Out (LI
 ✅ Simplify Path (Medium)  
 ✅ Remove K Digits to Make the Smallest Number (Medium)  
 
-📂 **Solutions:** [Stack Solutions](./stack/)
+📂 **Solutions:** [Stack Solutions](https://github.com/Yash-Bandal/DSA/tree/bb27a39dafc47d755e928c78409ed4ad2422482a/12%20Stack_And_Queues/01_Stack/01_Learning)
 
 ---
 
@@ -126,6 +126,6 @@ A **queue** is a linear data structure that follows the **First In, First Out (F
 ✅ Top K Frequent Elements (Medium)  
 ✅ Find Median from Data Stream (Hard)  
 
-📂 **Solutions:** [Queue Solutions](./queue/)
+📂 **Solutions:** [Queue Solutions](https://github.com/Yash-Bandal/DSA/tree/bb27a39dafc47d755e928c78409ed4ad2422482a/12%20Stack_And_Queues/01_Stack/01_Learning)
 
 ---
