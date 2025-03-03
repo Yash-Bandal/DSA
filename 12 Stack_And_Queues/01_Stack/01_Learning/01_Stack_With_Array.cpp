@@ -17,7 +17,7 @@ public:
     }
     void push(int x)
     {
-        top++;
+        top++;          //first increment then add..that is move index further
         arr[top] = x;
     }
     int pop()
