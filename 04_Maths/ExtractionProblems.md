@@ -1,7 +1,8 @@
 /*
 Operations on Extracted digits from number
 */
-
+## Count Digits
+```cpp
 //1 Count
 #include <iostream> 
 #include <cmath> // for abs function
@@ -35,9 +36,12 @@ int main() {
     std::cout << "Number of digits in " << num << " is " << countDigits(num) << std::endl;
 
     return 0;
-}'
+}
 
-//---------------------------------------------
+```
+
+## Reverse Digits
+```cpp
 //2 .Rev Num
 #include <iostream>
 #include <cmath> // for abs function
@@ -71,9 +75,10 @@ int main() {
 
     return 0;
 }
+```
 
-
-//3 Palindrome
+## 3 Palindrome
+```cpp
 class Solution {
 public:
     bool isPalindrome(int x) {
@@ -102,9 +107,10 @@ public:
     }
 };
 
+```
 
-
-//4 Armstron
+## 4 Armstron
+```cpp
 /*
 An Armstrong number (also known as a narcissistic number) is a number that is equal to
 the sum of its own digits raised to the power of the number of digits. For example, 153 is an Armstrong number because 1 cub+ 5 cub+ 3 cub=153
@@ -154,7 +160,7 @@ int main() {
 
     return 0;
 }
-
+```
 
 
 
