@@ -3,7 +3,7 @@
 ## 📌 Overview 
 This repository contains implementations of essential **Data Structures and Algorithms (DSA)** in C++.
 
-## 📂 Topics To Be Covered
+## 📂 Topics To Be Covered 
 
 ### 🔹 Linear Data Structures
 - Arrays
