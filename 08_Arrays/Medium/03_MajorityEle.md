@@ -1,5 +1,8 @@
+## Problem Statement : 
+Given an array of N integers, write a program to return an element that occurs more than N/2 times in the given array. You may consider that such an element always exists in the array.
 
-//Brute Force
+### Brute Force
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -33,11 +36,12 @@ int main()
     cout << "The majority element is: " << ans << endl;
     return 0;
 }
+```
 
-//Better Map
+### Better - Map
 
 
-
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -72,10 +76,11 @@ int main()
     return 0;
 }
 
+```
 
-//Optimal
+### Optimal
 
-
+```cpp
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -115,5 +120,5 @@ int main()
     cout << "The majority element is: " << ans << endl;
     return 0;
 }
-
+```
 
