@@ -1,6 +1,6 @@
-//Passing array
+## Passing array
 
-
+````cpp
 #include <bits/stdc++.h>
 #include <climits>
 using namespace std;
@@ -79,9 +79,9 @@ int main()
     return 0;
 }
 
-
-
-// Passing a vector
+```
+## Passing a vector
+```cpp
 #include <bits/stdc++.h>
 #include <climits>
 using namespace std;
@@ -143,4 +143,4 @@ int main()
     countFreq(vec, n);
     return 0;
 }
-
+```
