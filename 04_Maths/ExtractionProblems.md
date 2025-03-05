@@ -169,16 +169,16 @@ Number of digits in 121 is 1
 ```
 
 
-## 4 Armstron
+## 4 Armstrong Number
 ```cpp
 /*
 An Armstrong number (also known as a narcissistic number) is a number that is equal to
-the sum of its own digits raised to the power of the number of digits. For example, 153 is an Armstrong number because 1 cub+ 5 cub+ 3 cub=153
+the sum of its own digits raised to the power of the number of digits. For example, 153 is an Armstrong number because 1 cube +   5 cube + 3 cueb = 153
 1634=1^4+6^4+3^4+4^4=1634
 153, 370, 371 and 407 are an Armstrong number list 
  4 digits are 1634, 8208, and 9474 ...raise to power 4 each digit
-
 */
+
 #include <iostream>
 #include <cmath> // For pow function
 
