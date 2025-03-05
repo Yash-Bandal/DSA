@@ -78,7 +78,31 @@ int main()
 
 ```
 
-### Optimal
+### Optimal Moores Algorithm
+## Boyer-Moore Voting Algorithm
+
+### Step 1: Find a Candidate Majority Element
+1. **Initialize Variables**:
+   - Set `cnt = 0` (vote count).
+   - Set `el = 0` (potential majority element).
+2. **Traverse the Array**:
+   - If `cnt == 0`, assign `el = nums[i]` and set `cnt = 1`.
+   - If `nums[i] == el`, increase `cnt`.
+   - Otherwise, decrease `cnt`.
+3. **Result of Step 1**:
+   - At the end of this loop, `el` **might** be the majority element.
+
+### Step 2: Validate the Candidate
+1. **Check if the Problem Guarantees a Majority Element**:
+   - If the problem (e.g., LeetCode **169. Majority Element**) guarantees a majority element, the candidate is correct.
+2. **Otherwise, Verify the Candidate**:
+   - Traverse the array again and count occurrences of `el`.
+   - If `el` appears more than `n/2` times, it is the majority element.
+   - Otherwise, return an indication (e.g., `-1`) that no majority element exists.
+
+
+
+
 
 ```cpp
 
@@ -121,4 +145,6 @@ int main()
     return 0;
 }
 ```
-
+### Complexity Analysis
+- **Time Complexity**: **O(n)** (single pass to find candidate + single pass to validate).
+- **Space Complexity**: **O(1)** (only a few integer variables are used).
