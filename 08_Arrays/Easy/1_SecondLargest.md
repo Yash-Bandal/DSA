@@ -1,5 +1,6 @@
-//Largest
-// Brute Force Sort
+# Largest
+## Brute Force Sort
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
  
@@ -17,17 +18,19 @@ int main() {
    
     return 0;
 }
-
+```
+```
 Output:
 The Largest element in the array is: 5
 The Largest element in the array is: 10
-
+```
 Time Complexity: O(N*log(N))
 Space Complexity: O(n)
 
   
 
-//Using max var
+## Using max var
+```cpp
  #include <bits/stdc++.h>
  
 using namespace std;
@@ -53,5 +56,6 @@ int main() {
   cout << "The largest element in the array is: " << max<<endl;
   return 0;
 }
+```
 Time Complexity: O(N)
 Space Complexity: O(1)
