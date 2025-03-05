@@ -6,7 +6,7 @@ Operations on Extracted digits from number
 //1 Count
 #include <iostream> 
 #include <cmath> // for abs function
-
+using namespace std;
 int countDigits(int num) {
     // Handle the edge case where num is 0
     if (num == 0) {
@@ -27,17 +27,23 @@ int countDigits(int num) {
 
 int main() {
     int num = 12345;
-    std::cout << "Number of digits in " << num << " is " << countDigits(num) << std::endl;
+    cout << "Number of digits in " << num << " is " << countDigits(num) <<endl;
 
     num = -9876;
-    std::cout << "Number of digits in " << num << " is " << countDigits(num) << std::endl;
+    cout << "Number of digits in " << num << " is " << countDigits(num) <<endl;
 
     num = 0;
-    std::cout << "Number of digits in " << num << " is " << countDigits(num) << std::endl;
+    cout << "Number of digits in " << num << " is " << countDigits(num) <<endl;
 
     return 0;
 }
 
+```
+```
+Output:
+Number of digits in 12345 is 5
+Number of digits in -9876 is 4
+Number of digits in 0 is 1
 ```
 
 ## Reverse Digits
@@ -49,14 +55,14 @@ using namespace std;
 
 int reverseNumber(int num) {
     int reversed = 0;
-    bool isNegative = num < 0;  /
+    bool isNegative = num < 0;  
 
     num = abs(num);
 
     while (num > 0) {
         int digit = num % 10;      // Extract 
         reversed = reversed * 10 + digit;  
-        num /= 10;  /
+        num /= 10;  
     }
 
     // If the number was negative, add the negative sign back
@@ -76,7 +82,12 @@ int main() {
     return 0;
 }
 ```
-
+```
+Output :
+Reversed number of 12345 is 54321
+Reversed number of -9876 is -6789
+Reversed number of 0 is 0
+```
 ## 3 Palindrome
 ```cpp
 class Solution {
@@ -108,6 +119,55 @@ public:
 };
 
 ```
+```
+#include <iostream> 
+#include <cmath> // for abs function
+using namespace std;
+
+ bool isPalindrome(int x) {
+        // Handle negative numbers
+        if (x < 0) {
+            return false;
+        }
+        
+        // Handle single-digit numbers (they are palindromes)
+        if (x > -10 && x < 10) {
+            return true;
+        }
+
+        int original = x;
+        long reversed = 0;  // Use long to handle overflow cases
+        int lastDigit;
+
+        while (x > 0) {
+            lastDigit = x % 10;
+            reversed = reversed * 10 + lastDigit;
+            x = x / 10;
+        }
+
+        // Compare the original number with the reversed number
+        return original == reversed;
+}
+
+int main() {
+    int num = 12345;
+    cout << "Number of digits in " << num << " is " << isPalindrome(num) <<endl;
+
+    num = -1331;
+    cout << "Number of digits in " << num << " is " <<isPalindrome(num) <<endl;
+
+    num = 121;
+    cout << "Number of digits in " << num << " is " << isPalindrome(num) <<endl;
+
+    return 0;
+}
+```
+```
+Number of digits in 12345 is 0
+Number of digits in -1331 is 0
+Number of digits in 121 is 1
+```
+
 
 ## 4 Armstron
 ```cpp
