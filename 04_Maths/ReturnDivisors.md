@@ -1,11 +1,9 @@
 # C++ Divisors Calculation
 
-## Introduction
-This repository contains various implementations to find divisors of a given number in C++. Different approaches have been used to optimize the computation time.
-
 ## Code Implementations
 
-### Basic Approach
+### Approach 1: Basic Method (Using `void` function)
+
 ```cpp
 #include<iostream>
 using namespace std;
@@ -33,7 +31,23 @@ int main()
 }
 ```
 
-### Using Vector (Can't use return type `int`, using vector function instead)
+#### Output Example
+```
+Enter Number
+12
+The Divisors are :
+1
+2
+3
+4
+6
+12
+```
+
+---
+
+### Approach 2: Using `vector<int>`
+
 ```cpp
 #include <iostream>
 #include <vector>
@@ -69,7 +83,21 @@ int main()
 }
 ```
 
-### Optimized Approach (Using sqrt(n) to reduce iterations)
+#### Output Example
+```
+Enter Number
+15
+The Divisors are :
+1
+3
+5
+15
+```
+
+---
+
+### Approach 3: Optimized Using `sqrt(n)`
+
 ```cpp
 #include<bits/stdc++.h>
 #include<iostream>
@@ -83,14 +111,12 @@ vector<int> div(int n)
     for(int i=1 ; i<=sqrt(n) ; i++){
         if(n % i == 0){
             divisors.push_back(i);
-            // cout<<i<<" ";
-            if(n/i != i){
+            if(n/i !=i){
                 divisors.push_back(n/i);
-                // cout<<n/i<<" ";  //1 36 2 18 3 12 4 9 6  //sort this
             }
         }
     }
-    return divisors; 
+  return divisors; 
 }
 
 int main()
@@ -111,7 +137,18 @@ int main()
 }
 ```
 
-### Using Lists (List sorting required as `list` doesn't support random access iterators)
+#### Output Example
+```
+Enter Number
+36
+The Divisors are :
+1 2 3 4 6 9 12 18 36 
+```
+
+---
+
+### Approach 4: Using `list<int>`
+
 ```cpp
 #include<bits/stdc++.h>
 #include<iostream>
@@ -131,7 +168,6 @@ void div(int n)
            }
         }
     }
-    // sort(ls.begin(),ls.end());  //list datatype doesnt support random acces iterators..so ls.sort()
     ls.sort();
     
     for(auto i: ls){cout<<i<<" ";}
@@ -149,7 +185,18 @@ int main()
 }
 ```
 
-### Optimized Time Complexity (TC)
+#### Output Example
+```
+Enter Number
+100
+The Divisors are :
+1 2 4 5 10 20 25 50 100 
+```
+
+---
+
+### Optimized `O(√N log N)` Approach
+
 ```cpp
 #include<bits/stdc++.h>
 #include<iostream>
@@ -158,10 +205,6 @@ using namespace std;
 void div(int n)
 {
     list<int> ls;
-    // for(int i=1 ; i<=sqrt(n) ; i++)
-    //6*6<=36
-    //*7<!=36
-    //TC=O(root N)  ....O( √N)  +
     for(int i=1 ; i*i<=n ; i++)
     {
         if(n % i == 0)
@@ -173,11 +216,7 @@ void div(int n)
            }
         }
     }
-    // sort(ls.begin(),ls.end());   //not work
-    //Internal sort func TC= O(no of factors Log(no of Factors))  ..O(nLog n) +
     ls.sort();
-    
-    //O(n)...thus total is sum of above all
     for(auto i: ls){cout<<i<<" ";}
 }
 
@@ -193,9 +232,25 @@ int main()
 }
 ```
 
+#### Output Example
+```
+Enter Number
+49
+The Divisors are :
+1 7 49 
+```
+
+## Conclusion
+- **Basic Approach** has `O(N)` complexity.
+- **Vector-based Approach** uses `O(N)` space but allows storage of divisors.
+- **Optimized Approach** reduces time complexity to `O(√N)`.
+- **List-based Approach** uses sorting for efficient output.
+- **Final Optimized Approach** uses `O(√N log N)`, making it the most efficient among these methods.
 
 
 
+
+## Previous 
 ```cpp
 #include<iostream>
 using namespace std;
