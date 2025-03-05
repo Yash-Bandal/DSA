@@ -119,7 +119,7 @@ public:
 };
 
 ```
-```
+```cpp
 #include <iostream> 
 #include <cmath> // for abs function
 using namespace std;
@@ -222,7 +222,9 @@ int main() {
 }
 ```
 
-
+```
+1634 is an Armstrong number
+```
 
 
 
