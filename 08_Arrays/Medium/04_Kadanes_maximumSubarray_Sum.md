@@ -112,20 +112,6 @@ long long maxSubarraySum(int arr[], int n) {
         if (sum < 0) {
             sum = 0;
         }
-
-        // Step-by-step visualization:
-        // Iteration | arr[i] | sum (so far) | maxi
-        // --------------------------------------
-        //     1    |   -2   |  0  (reset)  | -2
-        //     2    |    1   |  1           |  1
-        //     3    |   -3   |  0  (reset)  |  1
-        //     4    |    4   |  4           |  4
-        //     5    |   -1   |  3           |  4
-        //     6    |    2   |  5           |  5
-        //     7    |    1   |  6           |  6
-        //     8    |   -5   |  1           |  6
-        //     9    |    4   |  5           |  6
-
     }
 
     // If we want to consider an empty subarray (optional check)
@@ -141,6 +127,18 @@ int main() {
     cout << "The maximum subarray sum is: " << maxSum << endl;
     return 0;
 }
+        // Step-by-step visualization:
+        // Iteration | arr[i] | sum (so far) | maxi
+        // --------------------------------------
+        //     1    |   -2   |  0  (reset)  | -2
+        //     2    |    1   |  1           |  1
+        //     3    |   -3   |  0  (reset)  |  1
+        //     4    |    4   |  4           |  4
+        //     5    |   -1   |  3           |  4
+        //     6    |    2   |  5           |  5
+        //     7    |    1   |  6           |  6
+        //     8    |   -5   |  1           |  6
+        //     9    |    4   |  5           |  6
 
 ```
 
