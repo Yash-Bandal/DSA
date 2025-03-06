@@ -29,18 +29,18 @@ class Solution {
 
 
 ------------------------------------------------------------------
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 vector<int> printLeadersBruteForce(int arr[], int n) {
 
   vector<int> ans;
-  
+
   for (int i = 0; i < n; i++) {
     bool leader = true;
 
-    //Checking whether arr[i] is greater than all 
-    //the elements in its right side
+    // Checking whether arr[i] is greater than all 
+    // the elements in its right side
     for (int j = i + 1; j < n; j++)
       if (arr[j] > arr[i]) {
           
@@ -52,29 +52,64 @@ vector<int> printLeadersBruteForce(int arr[], int n) {
 
     // Push all the leaders in ans array.
     if (leader)
-    ans.push_back(arr[i]);
+      ans.push_back(arr[i]);
 
   }
-  
+
   return ans;
 }
 
 int main() {
-    
+
   // Array Initialization.
   int n = 6;
   int arr[n] = {10, 22, 12, 3, 0, 6};
 
-  vector<int> ans = printLeadersBruteForce(arr,n);
-  
-  for(int i = 0;i<ans.size();i++){
-      
-      cout<<ans[i]<<" ";
+  vector<int> ans = printLeadersBruteForce(arr, n);
+
+  for (int i = 0; i < ans.size(); i++) {
+    cout << ans[i] << " ";
   }
-  
-  cout<<endl;
+
+  cout << endl;
   return 0;
 }
+
+/*
+### Dry Run of the Code:
+
+#### Given Input:
+   arr = {10, 22, 12, 3, 0, 6}, n = 6
+
+#### Iterations:
+
+1. **i = 0**, arr[i] = 10
+   - Compare with right elements: {22, 12, 3, 0, 6}
+   - 22 > 10 → Not a leader (break)
+
+2. **i = 1**, arr[i] = 22
+   - Compare with right elements: {12, 3, 0, 6}
+   - 22 > all → **Leader** → ans = {22}
+
+3. **i = 2**, arr[i] = 12
+   - Compare with right elements: {3, 0, 6}
+   - 12 > all → **Leader** → ans = {22, 12}
+
+4. **i = 3**, arr[i] = 3
+   - Compare with right elements: {0, 6}
+   - 6 > 3 → Not a leader (break)
+
+5. **i = 4**, arr[i] = 0
+   - Compare with right elements: {6}
+   - 6 > 0 → Not a leader (break)
+
+6. **i = 5**, arr[i] = 6
+   - No right elements → **Leader** → ans = {22, 12, 6}
+
+#### Final Output:
+   **Leaders in the array:** `22 12 6`
+
+*/
 
 
 
