@@ -1,8 +1,10 @@
 ### 2379. Minimum Recolors to Get K Consecutive Black Blocks
 ### Problem Statement :
 Return the minimum number of operations needed such that there is at least one occurrence of k consecutive black blocks.
+---
 Input: blocks = "WBBWWBBWBW", k = 7
 Output: 3
+---
 
 ### My Logic On Sq
 ```cpp
