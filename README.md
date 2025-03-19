@@ -7,7 +7,7 @@ This repository contains implementations of essential **Data Structures and Algo
  
 ### 🔹 Linear Data Structures 
 - Arrays  
-- Linked Lists (Singly, Doubly, Circular) 
+- Linked Lists (Singly, Doubly, Circular)  
 - Stacks
 - Queues (Simple, Circular, Deque, Priority Queue)
 
