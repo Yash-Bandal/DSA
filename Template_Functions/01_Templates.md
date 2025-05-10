@@ -16,7 +16,7 @@ bool isPrime(int n) {
     return count == 2; 
 }
 ```
-
+ 
 
 ## Count Digits
 ```cpp
