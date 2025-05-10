@@ -1,5 +1,5 @@
 ## Check Prime 
-```cpp
+```cpp 
 bool isPrime(int n) {
     if (n <= 1) return false; // 0 and 1 are not prime
 
